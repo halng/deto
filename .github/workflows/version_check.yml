@@ -1,0 +1,25 @@
+name: Check for New Versions
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Run every day at midnight UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up shell script
+        run: |
+          chmod +x ./update_versions.sh
+
+      - name: Set up GitHub CLI (for PR creation)
+        run: |
+          sudo apt-get install gh  # Install GitHub CLI
+
+      - name: Run the version update script
+        run: |
+          ./update_versions.sh
