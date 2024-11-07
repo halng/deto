@@ -1,5 +1,6 @@
-The MIT License (MIT)
+package pkg
 
+/*
 Copyright © 2024 Hal Ng <haonguyentan2001@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,3 +20,22 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+*/
+
+// == In this package, we will manage the candidate and version that are installed in the system. == //
+
+type Man struct {
+	Candidate      string
+	Version        string
+	Installed      bool
+	DefaultVersion string
+}
+
+// Handler is an entry point for the package_manager.go file
+func (man *Man) Handler() {
+
+}
+
+func (man *Man) Validate() {
+	// checking and validate input.
+}
