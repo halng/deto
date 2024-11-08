@@ -1,0 +1,45 @@
+name: Check for New Versions
+
+on:
+  # schedule:
+  #   - cron: "0 0 * * *"  # Run every day at midnight UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install requests json
+      - name: Run script
+        run: |
+          python scripts/update_registry.py
+        working-directory: scripts
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            registry:
+              - 'registry/**'
+      - name: Get current date
+        if: steps.changes.outputs.registry == 'true'
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Create Pull Request
+        if: steps.changes.outputs.registry == 'true'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: update registry - ${{ steps.date.outputs.date }}"
+          title: "feat: update registry - ${{ steps.date.outputs.date }}"
+          body: "This PR updates the registry with the latest versions of the tools."
+          branch: "update-registry"
+          base: "main"
