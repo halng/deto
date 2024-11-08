@@ -24,11 +24,14 @@ THE SOFTWARE.
 
 import (
 	"fmt"
-
+	"github.com/halng/deto/pkg"
+	"github.com/halng/deto/tui"
 	"github.com/spf13/cobra"
+	"os"
+	"runtime"
 )
 
-// manCmd represents the man command
+// ManCmd represents the man command
 var manCmd = &cobra.Command{
 	Use:   "man",
 	Short: "A brief description of your command",
@@ -39,20 +42,53 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("man called")
+		tui.Clear()
+
+		actionType, err := cmd.Flags().GetString("action")
+		if err != nil {
+			fmt.Println("There was an error getting the action type.", err.Error())
+			os.Exit(1)
+		}
+
+		if actionType == "" {
+			options := []string{
+				"install",
+				"remove",
+				"list",
+				"default",
+			}
+
+			actionType = tui.GetChoice(options)
+		}
+		tui.Clear()
+
+		candidate, err := cmd.Flags().GetString("candidate")
+		if err != nil {
+			fmt.Println("There was an error getting the candidate type.", err.Error())
+			os.Exit(1)
+		}
+		if candidate == "" {
+			candidate = tui.Input("Enter the candidate name: ")
+		}
+
+		tui.Clear()
+
+		os := runtime.GOOS
+		arch := runtime.GOARCH
+
+		var man = pkg.Man{
+			Candidate:       candidate,
+			ActionType:      actionType,
+			OperatingSystem: os,
+			Architecture:    arch,
+		}
+
+		man.Handler()
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(manCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// manCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// manCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	manCmd.Flags().StringP("action", "a", "", "Action name. [install|remove|list|default]")
+	manCmd.Flags().StringP("candidate", "c", "", "Candidate name")
 }
