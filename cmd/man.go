@@ -24,9 +24,11 @@ THE SOFTWARE.
 
 import (
 	"fmt"
+	"github.com/halng/deto/pkg"
 	"github.com/halng/deto/tui"
 	"github.com/spf13/cobra"
 	"os"
+	"runtime"
 )
 
 // ManCmd represents the man command
@@ -71,8 +73,17 @@ to quickly create a Cobra application.`,
 
 		tui.Clear()
 
-		fmt.Printf("Action: %s for candidate: %s", actionType, candidate)
+		os := runtime.GOOS
+		arch := runtime.GOARCH
 
+		var man = pkg.Man{
+			Candidate:       candidate,
+			ActionType:      actionType,
+			OperatingSystem: os,
+			Architecture:    arch,
+		}
+
+		man.Handler()
 	},
 }
 

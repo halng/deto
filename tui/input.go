@@ -25,10 +25,6 @@ func Input(text string) string {
 	return m.(InputModel).textInput.Value()
 }
 
-type (
-	errMsg error
-)
-
 type InputModel struct {
 	textInput textinput.Model
 	err       error
