@@ -3,8 +3,9 @@ name: Check for New Versions
 on:
   # schedule:
   #   - cron: "0 0 * * *"  # Run every day at midnight UTC
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:  # Allow manual trigger
-
 jobs:
   update-registry:
     runs-on: ubuntu-latest
