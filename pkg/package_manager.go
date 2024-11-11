@@ -1,14 +1,23 @@
 package pkg
 
 import (
+	"archive/tar"
+	"compress/gzip"
+	"crypto/sha256"
+	"crypto/sha512"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/halng/deto/tui"
+	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strconv"
+	"strings"
 )
 
 /*
@@ -66,11 +75,31 @@ type RegistryData struct {
 	Windows   []RegistryVersion `json:"windows"`
 }
 
+var DefaultLocation = "/.deto"
+
 // Handler is an entry point for the package_manager.go file
 
 func (man *Man) Handler() {
+	fmt.Println("Starting package manager")
+	// check if DefaultLocation exists or not
+	homePath, err := os.UserHomeDir()
+	if err != nil {
+		fmt.Printf("Error getting home directory: %s\n", err)
+		os.Exit(1)
+	}
+	DefaultLocation = filepath.Join(homePath, DefaultLocation)
+	fmt.Printf("Default location: %s\n", DefaultLocation)
+	if _, err := os.Stat(DefaultLocation); os.IsNotExist(err) {
+		// get root directory
+		err := os.MkdirAll(DefaultLocation, 0777)
+		if err != nil {
+			fmt.Printf("Error creating directory: %s\n", err)
+			os.Exit(1)
+		}
+	}
+
 	// handle business logic here.
-	data := CheckRegistryData(*man)
+	data := fetchRegistryData(*man)
 	for i, item := range data {
 		fmt.Printf("\nItem: %d, \n\t Name: %s\n\t Version: %s\n\t Provider: %s\n\t LTS: %t", i, item.Name, item.Version, item.Provider, item.IsLTS)
 	}
@@ -81,22 +110,35 @@ func (man *Man) Handler() {
 	}
 
 	selectedItem := data[idx]
-	DownloadAndVerify(selectedItem.Link, selectedItem.Checksum, "")
 	// try to download and verify checksum
+	isValid := DownloadAndVerify(selectedItem.Link, selectedItem.Checksum, "", selectedItem.Name)
+
+	// extract the file
+	if isValid {
+		err = extractFile(selectedItem.Name, man.Candidate, selectedItem.Version)
+		if err != nil {
+			fmt.Printf("\nError: %s\n", err)
+			os.Exit(1)
+		}
+	} else {
+		fmt.Println("Checksum is not valid")
+		os.Exit(1)
+	}
+
+	_ = os.Remove(selectedItem.Name)
 
 }
 
-func CheckRegistryData(man Man) []RegistryVersion {
+func fetchRegistryData(man Man) []RegistryVersion {
 	fmt.Printf("Staring checking data for OS: %s, Arch: %s", man.OperatingSystem, man.Architecture)
 	url := fmt.Sprintf("https://raw.githubusercontent.com/halng/deto/refs/heads/main/registry/%s_versions.json", man.Candidate)
 
 	resp, err := http.Get(url)
 
-	if err != nil {
-		if resp != nil && resp.StatusCode == http.StatusNotFound {
-			tea.Printf("Candidate: %s are not supported. Please try again later.", man.Candidate)
-			os.Exit(1)
-		}
+	if err != nil || resp != nil && resp.StatusCode == http.StatusNotFound {
+		tea.Printf("Candidate: %s are not supported. Please try again later.", man.Candidate)
+		os.Exit(1)
+
 	}
 
 	defer resp.Body.Close()
@@ -138,4 +180,147 @@ func CheckRegistryData(man Man) []RegistryVersion {
 	}
 
 	return result
+}
+
+func DownloadAndVerify(url string, checksum string, algo string, name string) bool {
+	if algo == "" {
+		algo = "sha256"
+	}
+	// Download the file
+	filePath, err := downloadFile(url, name)
+	if err != nil {
+		fmt.Println("Error downloading file:", err)
+		return false
+	}
+
+	// Verify checksum
+	valid, err := verifyChecksum(filePath, checksum, algo)
+	if err != nil {
+		fmt.Println("Error verifying checksum:", err)
+		return false
+	}
+
+	return valid
+}
+
+// downloadFile downloads a file from a URL and saves it locally
+func downloadFile(url string, name string) (string, error) {
+	resp, err := http.Get(url)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	filePath := name
+	file, err := os.Create(filePath)
+	if err != nil {
+		return "", err
+	}
+	defer file.Close()
+
+	_, err = io.Copy(file, resp.Body)
+	if err != nil {
+		return "", err
+	}
+
+	return filePath, nil
+}
+
+// verifyChecksum calculates the checksum of a file and compares it with the expected checksum
+func verifyChecksum(filePath, expectedChecksum, algo string) (bool, error) {
+	file, err := os.Open(filePath)
+	if err != nil {
+		return false, err
+	}
+	defer file.Close()
+
+	var hash []byte
+	switch algo {
+	case "sha256":
+		hasher := sha256.New()
+		if _, err := io.Copy(hasher, file); err != nil {
+			return false, err
+		}
+		hash = hasher.Sum(nil)
+	case "sha512":
+		hasher := sha512.New()
+		if _, err := io.Copy(hasher, file); err != nil {
+			return false, err
+		}
+		hash = hasher.Sum(nil)
+	default:
+		return false, fmt.Errorf("unsupported hash algorithm: %s", algo)
+	}
+
+	// Convert hash to a hex string
+	checksum := hex.EncodeToString(hash)
+	return checksum == expectedChecksum, nil
+}
+
+func extractFile(fileName string, candidate string, version string) error {
+	if strings.Contains(fileName, ".tar.gz") {
+		return decompressTarGz(fileName, candidate, version)
+	}
+	return fmt.Errorf("unsupported file format: %s", fileName)
+}
+
+func decompressTarGz(src, candidate, version string) error {
+	// Open the tar.gz file
+	finalDest := filepath.Join(DefaultLocation, candidate, version)
+	file, err := os.Open(src)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	// Create a gzip reader on the opened file
+	gzipReader, err := gzip.NewReader(file)
+	if err != nil {
+		return err
+	}
+	defer gzipReader.Close()
+
+	// Create a tar reader on top of the gzip reader
+	tarReader := tar.NewReader(gzipReader)
+
+	// Iterate over the tar file entries
+	for {
+		header, err := tarReader.Next()
+		if err == io.EOF {
+			break // End of archive
+		}
+		if err != nil {
+			return err
+		}
+
+		// Construct the full file path
+		targetPath := filepath.Join(finalDest, header.Name)
+
+		// Check the type of entry
+		switch header.Typeflag {
+		case tar.TypeDir:
+			// Make directory if not exists
+			if err := os.MkdirAll(targetPath, os.FileMode(header.Mode)); err != nil {
+				return err
+			}
+		case tar.TypeReg:
+			// Make the file and write its content
+			if err := os.MkdirAll(filepath.Dir(targetPath), os.ModePerm); err != nil {
+				return err
+			}
+			outFile, err := os.Create(targetPath)
+			if err != nil {
+				return err
+			}
+			if _, err := io.Copy(outFile, tarReader); err != nil {
+				outFile.Close()
+				return err
+			}
+			outFile.Close()
+		default:
+			log.Printf("Unable to handle file type %c in tar file", header.Typeflag)
+		}
+	}
+
+	return nil
 }

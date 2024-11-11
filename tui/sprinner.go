@@ -15,6 +15,7 @@ type SpinnerModel struct {
 	err      error
 }
 
+// initialSpinnerModel returns a new SpinnerModel
 func initialSpinnerModel() SpinnerModel {
 	s := spinner.New()
 	s.Spinner = spinner.Dot
@@ -59,7 +60,8 @@ func (m SpinnerModel) View() string {
 	return str
 }
 
-func main() {
+// Spinner runs a spinner
+func Spinner() {
 	p := tea.NewProgram(initialSpinnerModel())
 	if _, err := p.Run(); err != nil {
 		fmt.Println(err)
