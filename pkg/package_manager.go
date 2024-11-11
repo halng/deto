@@ -11,7 +11,6 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/halng/deto/tui"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -80,7 +79,6 @@ var DefaultLocation = "/.deto"
 // Handler is an entry point for the package_manager.go file
 
 func (man *Man) Handler() {
-	fmt.Println("Starting package manager")
 	// check if DefaultLocation exists or not
 	homePath, err := os.UserHomeDir()
 	if err != nil {
@@ -148,18 +146,13 @@ func fetchRegistryData(man Man) []RegistryVersion {
 		os.Exit(1)
 	}
 
-	body, err := ioutil.ReadAll(resp.Body)
+	var data map[string]interface{}
+	err = json.NewDecoder(resp.Body).Decode(&data)
+
 	if err != nil {
 		fmt.Println("Error reading response body:", err)
 		os.Exit(1)
 	}
-
-	var data map[string]interface{}
-	if err := json.Unmarshal(body, &data); err != nil {
-		fmt.Println("Error parsing response body:", err)
-		os.Exit(1)
-	}
-
 	var result []RegistryVersion
 
 	if osData, ok := data[man.OperatingSystem].([]interface{}); ok {
