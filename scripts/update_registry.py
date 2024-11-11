@@ -35,7 +35,7 @@ def _adoptium():
                     "checksum": binary["package"]["checksum"],
                     "link": binary["package"]["link"],
                     "name": binary["package"]["name"],
-                    "version": version,
+                    "version": str(version),
                     "is_lts": version in versions["available_lts_releases"],
                     "provider": "Adoptium"
                 })
@@ -71,7 +71,7 @@ def fetch_all_go_versions():
               all_versions[file['os']] = []
             
             all_versions[file['os']].append({
-                "version": file['version'],
+                "version": str(file['version']),
                 "architecture": file['arch'],
                 "name": file['filename'],
                 "checksum": file['sha256'],
