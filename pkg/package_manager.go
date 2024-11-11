@@ -293,8 +293,19 @@ func decompressTarGz(src, candidate, version string) error {
 			return err
 		}
 
+		// Validate the file path
+		if strings.Contains(header.Name, "..") {
+			return fmt.Errorf("invalid file path: %s", header.Name)
+		}
+
 		// Construct the full file path
 		targetPath := filepath.Join(finalDest, header.Name)
+		targetPath = filepath.Clean(targetPath)
+
+		// Ensure the target path is within the final destination
+		if !strings.HasPrefix(targetPath, filepath.Clean(finalDest)+string(os.PathSeparator)) {
+			return fmt.Errorf("invalid file path: %s", header.Name)
+		}
 
 		// Check the type of entry
 		switch header.Typeflag {
