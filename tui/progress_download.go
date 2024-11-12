@@ -89,7 +89,7 @@ func (m DownloadProgressModel) View() string {
 	}
 
 	pad := strings.Repeat(" ", padding)
-	return "Downloading...\n" +
+	return "Downloading...\n\n" +
 		pad + m.Progress.View() + "\n\n" +
 		pad + helpStyleDownload("Press any key to quit")
 }

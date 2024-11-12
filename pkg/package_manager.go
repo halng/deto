@@ -110,6 +110,10 @@ func (man *Man) Handler() {
 
 	idx, _ := strconv.Atoi(strings.Split(selected, "|")[0])
 
+	if idx <= 0 {
+		fmt.Println("You didn't select any item")
+		os.Exit(1)
+	}
 	selectedItem := data[idx-1]
 	// try to download and verify checksum
 	isValid := DownloadAndVerify(selectedItem.Link, selectedItem.Checksum, "", selectedItem.Name)
@@ -270,7 +274,7 @@ func verifyChecksum(filePath, expectedChecksum, algo string) (bool, error) {
 			os.Exit(1)
 		}
 	}()
-
+	defer p.Send(tea.Quit())
 	file, err := os.Open(filePath)
 	if err != nil {
 		return false, err
@@ -297,7 +301,6 @@ func verifyChecksum(filePath, expectedChecksum, algo string) (bool, error) {
 
 	// Convert hash to a hex string
 	checksum := hex.EncodeToString(hash)
-	p.Send(tea.Quit())
 	return checksum == expectedChecksum, nil
 }
 
