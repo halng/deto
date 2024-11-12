@@ -8,6 +8,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/charmbracelet/bubbles/progress"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/halng/deto/tui"
 	"io"
@@ -74,7 +75,7 @@ type RegistryData struct {
 	Windows   []RegistryVersion `json:"windows"`
 }
 
-var DefaultLocation = "/.deto"
+var DefaultLocation = "/.devtools"
 
 // Handler is an entry point for the package_manager.go file
 
@@ -98,16 +99,18 @@ func (man *Man) Handler() {
 
 	// handle business logic here.
 	data := fetchRegistryData(*man)
-	for i, item := range data {
-		fmt.Printf("\nItem: %d, \n\t Name: %s\n\t Version: %s\n\t Provider: %s\n\t LTS: %t", i, item.Name, item.Version, item.Provider, item.IsLTS)
-	}
-	idx, err := strconv.Atoi(tui.Input("Which item do you want to install?"))
-	if err != nil {
-		fmt.Printf("\nError: %s\n", err)
-		os.Exit(1)
-	}
 
-	selectedItem := data[idx]
+	tui.Clear()
+	listItem := make([]string, 0)
+	for i, item := range data {
+		listItem = append(listItem, fmt.Sprintf("%d| %s - %s - %s - Is LTS: %t", i+1, item.Name, item.Version, item.Provider, item.IsLTS))
+	}
+	title := "Select the version you want to install"
+	selected := tui.InitList(listItem, title)
+
+	idx, err := strconv.Atoi(strings.Split(selected, "|")[0])
+
+	selectedItem := data[idx-1]
 	// try to download and verify checksum
 	isValid := DownloadAndVerify(selectedItem.Link, selectedItem.Checksum, "", selectedItem.Name)
 
@@ -118,6 +121,8 @@ func (man *Man) Handler() {
 			fmt.Printf("\nError: %s\n", err)
 			os.Exit(1)
 		}
+		tui.Clear()
+		fmt.Println("Installation completed")
 	} else {
 		fmt.Println("Checksum is not valid")
 		os.Exit(1)
@@ -128,7 +133,17 @@ func (man *Man) Handler() {
 }
 
 func fetchRegistryData(man Man) []RegistryVersion {
-	fmt.Printf("Staring checking data for OS: %s, Arch: %s", man.OperatingSystem, man.Architecture)
+	msg := fmt.Sprintf("Starting checking data for OS: %s, Arch: %s", man.OperatingSystem, man.Architecture)
+	modelSpinner := tui.InitialSpinnerModel()
+	modelSpinner.Prompt = msg
+	p := tea.NewProgram(modelSpinner)
+	go func() {
+		if _, err := p.Run(); err != nil {
+			fmt.Println("Error running spinner:", err)
+			os.Exit(1)
+		}
+	}()
+
 	url := fmt.Sprintf("https://raw.githubusercontent.com/halng/deto/refs/heads/main/registry/%s_versions.json", man.Candidate)
 
 	resp, err := http.Get(url)
@@ -171,7 +186,7 @@ func fetchRegistryData(man Man) []RegistryVersion {
 			result = append(result, registry)
 		}
 	}
-
+	p.Send(tea.Quit())
 	return result
 }
 
@@ -185,7 +200,6 @@ func DownloadAndVerify(url string, checksum string, algo string, name string) bo
 		fmt.Println("Error downloading file:", err)
 		return false
 	}
-
 	// Verify checksum
 	valid, err := verifyChecksum(filePath, checksum, algo)
 	if err != nil {
@@ -198,11 +212,17 @@ func DownloadAndVerify(url string, checksum string, algo string, name string) bo
 
 // downloadFile downloads a file from a URL and saves it locally
 func downloadFile(url string, name string) (string, error) {
+	tui.Clear()
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
 	}
 	defer resp.Body.Close()
+
+	if resp.ContentLength <= 0 {
+		fmt.Println("can't parse content length, aborting download")
+		os.Exit(1)
+	}
 
 	filePath := name
 	file, err := os.Create(filePath)
@@ -211,16 +231,46 @@ func downloadFile(url string, name string) (string, error) {
 	}
 	defer file.Close()
 
-	_, err = io.Copy(file, resp.Body)
-	if err != nil {
-		return "", err
+	var p *tea.Program
+	pw := &tui.DownloadProgressWriter{
+		Total:  int(resp.ContentLength),
+		File:   file,
+		Reader: resp.Body,
+		OnProgress: func(ratio float64) {
+			p.Send(tui.ProgressMsg(ratio))
+		},
 	}
 
+	m := tui.DownloadProgressModel{
+		Pw:       pw,
+		Progress: progress.New(progress.WithDefaultGradient()),
+	}
+
+	p = tea.NewProgram(m)
+
+	go pw.Start(p)
+
+	if _, err := p.Run(); err != nil {
+		fmt.Println("error running program:", err)
+		os.Exit(1)
+	}
 	return filePath, nil
 }
 
 // verifyChecksum calculates the checksum of a file and compares it with the expected checksum
 func verifyChecksum(filePath, expectedChecksum, algo string) (bool, error) {
+	tui.Clear()
+	msg := fmt.Sprintf("Verify checksum of %s", filePath)
+	modelSpinner := tui.InitialSpinnerModel()
+	modelSpinner.Prompt = msg
+	p := tea.NewProgram(modelSpinner)
+	go func() {
+		if _, err := p.Run(); err != nil {
+			fmt.Println("Error running spinner:", err)
+			os.Exit(1)
+		}
+	}()
+
 	file, err := os.Open(filePath)
 	if err != nil {
 		return false, err
@@ -247,19 +297,35 @@ func verifyChecksum(filePath, expectedChecksum, algo string) (bool, error) {
 
 	// Convert hash to a hex string
 	checksum := hex.EncodeToString(hash)
+	p.Send(tea.Quit())
 	return checksum == expectedChecksum, nil
 }
 
 func extractFile(fileName string, candidate string, version string) error {
+	tui.Clear()
+	finalDest := filepath.Join(DefaultLocation, candidate, version)
+	msg := fmt.Sprintf("Extracting from %s to %s ...", fileName, finalDest)
+	modelSpinner := tui.InitialSpinnerModel()
+	modelSpinner.Prompt = msg
+	p := tea.NewProgram(modelSpinner)
+	go func() {
+		if _, err := p.Run(); err != nil {
+			fmt.Println("Error running spinner:", err)
+			os.Exit(1)
+		}
+	}()
+
+	defer p.Send(tea.Quit())
+
 	if strings.Contains(fileName, ".tar.gz") {
-		return decompressTarGz(fileName, candidate, version)
+		return decompressTarGz(fileName, finalDest)
 	}
 	return fmt.Errorf("unsupported file format: %s", fileName)
 }
 
-func decompressTarGz(src, candidate, version string) error {
+func decompressTarGz(src, finalDest string) error {
 	// Open the tar.gz file
-	finalDest := filepath.Join(DefaultLocation, candidate, version)
+
 	file, err := os.Open(src)
 	if err != nil {
 		return err
