@@ -108,7 +108,7 @@ func (man *Man) Handler() {
 	title := "Select the version you want to install"
 	selected := tui.InitList(listItem, title)
 
-	idx, err := strconv.Atoi(strings.Split(selected, "|")[0])
+	idx, _ := strconv.Atoi(strings.Split(selected, "|")[0])
 
 	selectedItem := data[idx-1]
 	// try to download and verify checksum
