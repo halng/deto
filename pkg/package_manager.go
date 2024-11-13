@@ -75,8 +75,6 @@ type RegistryData struct {
 	Windows   []RegistryVersion `json:"windows"`
 }
 
-var DefaultLocation = "/.devtools"
-
 // Handler is an entry point for the package_manager.go file
 
 func (man *Man) Handler() {
@@ -86,17 +84,56 @@ func (man *Man) Handler() {
 		fmt.Printf("Error getting home directory: %s\n", err)
 		os.Exit(1)
 	}
-	DefaultLocation = filepath.Join(homePath, DefaultLocation)
-	fmt.Printf("Default location: %s\n", DefaultLocation)
-	if _, err := os.Stat(DefaultLocation); os.IsNotExist(err) {
+	defaultLocation := filepath.Join(homePath, DefaultLocation)
+	if _, err := os.Stat(defaultLocation); os.IsNotExist(err) {
 		// get root directory
-		err := os.MkdirAll(DefaultLocation, 0777)
+		err := os.MkdirAll(defaultLocation, 0777)
 		if err != nil {
 			fmt.Printf("Error creating directory: %s\n", err)
 			os.Exit(1)
 		}
 	}
 
+	switch man.ActionType {
+	case "install":
+		version := man.installNewVersion()
+		AddNewVersion(man.Candidate, version)
+	case "list":
+		man.listOutAllVersion()
+
+	default:
+		fmt.Printf("Unsupported action type: %s\n", man.ActionType)
+	}
+
+}
+
+func (man *Man) listOutAllVersion() {
+	defaultCol := []string{
+		"Version",
+		"Current",
+	}
+
+	configData := LoadData()
+	var rows [][]string
+
+	for _, config := range configData {
+		if config.Candidate == man.Candidate {
+			for _, version := range config.Versions {
+				isCurrent := ""
+				if config.Current == version {
+					isCurrent = "Current"
+				}
+				rows = append(rows, []string{version, isCurrent})
+			}
+
+		}
+	}
+
+	tui.Table(defaultCol, rows)
+
+}
+
+func (man *Man) installNewVersion() string {
 	// handle business logic here.
 	data := fetchRegistryData(*man)
 
@@ -120,7 +157,7 @@ func (man *Man) Handler() {
 
 	// extract the file
 	if isValid {
-		err = extractFile(selectedItem.Name, man.Candidate, selectedItem.Version)
+		err := extractFile(selectedItem.Name, man.Candidate, selectedItem.Version)
 		if err != nil {
 			fmt.Printf("\nError: %s\n", err)
 			os.Exit(1)
@@ -133,7 +170,7 @@ func (man *Man) Handler() {
 	}
 
 	_ = os.Remove(selectedItem.Name)
-
+	return selectedItem.Version
 }
 
 func fetchRegistryData(man Man) []RegistryVersion {
@@ -306,7 +343,8 @@ func verifyChecksum(filePath, expectedChecksum, algo string) (bool, error) {
 
 func extractFile(fileName string, candidate string, version string) error {
 	tui.Clear()
-	finalDest := filepath.Join(DefaultLocation, candidate, version)
+	userHome, _ := os.UserHomeDir()
+	finalDest := filepath.Join(userHome, DefaultLocation, candidate, version)
 	msg := fmt.Sprintf("Extracting from %s to %s ...", fileName, finalDest)
 	modelSpinner := tui.InitialSpinnerModel()
 	modelSpinner.Prompt = msg
@@ -373,12 +411,12 @@ func decompressTarGz(src, finalDest string) error {
 		switch header.Typeflag {
 		case tar.TypeDir:
 			// Make directory if not exists
-			if err := os.MkdirAll(targetPath, os.FileMode(header.Mode)); err != nil {
+			if err := os.MkdirAll(targetPath, 0777); err != nil {
 				return err
 			}
 		case tar.TypeReg:
 			// Make the file and write its content
-			if err := os.MkdirAll(filepath.Dir(targetPath), os.ModePerm); err != nil {
+			if err := os.MkdirAll(filepath.Dir(targetPath), 0777); err != nil {
 				return err
 			}
 			outFile, err := os.Create(targetPath)
