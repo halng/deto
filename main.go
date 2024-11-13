@@ -25,4 +25,13 @@ import "github.com/halng/deto/cmd"
 
 func main() {
 	cmd.Execute()
+	//test := pkg.Man{
+	//	Candidate:       "go",
+	//	ActionType:      "install",
+	//	Architecture:    "amd64",
+	//	OperatingSystem: runtime.GOOS,
+	//}
+	//
+	//test.Handler()
+
 }
