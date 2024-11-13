@@ -41,8 +41,6 @@ func LoadData() []Config {
 
 		return configs
 	}
-
-	return nil
 }
 
 func saveData(configs []Config) {

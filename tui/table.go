@@ -88,6 +88,6 @@ func Table(cols []string, rows [][]string) {
 		fmt.Println("Error running spinner:", err)
 		os.Exit(1)
 	}
-	
+
 	p.Send(tea.Quit())
 }

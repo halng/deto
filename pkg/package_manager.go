@@ -98,10 +98,8 @@ func (man *Man) Handler() {
 	case "install":
 		version := man.installNewVersion()
 		AddNewVersion(man.Candidate, version)
-		break
 	case "list":
 		man.listOutAllVersion()
-		break
 
 	default:
 		fmt.Printf("Unsupported action type: %s\n", man.ActionType)
