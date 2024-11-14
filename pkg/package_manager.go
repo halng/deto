@@ -98,13 +98,64 @@ func (man *Man) Handler() {
 	case "install":
 		version := man.installNewVersion()
 		AddNewVersion(man.Candidate, version)
+		man.setDefaultVersion(version)
 	case "list":
 		man.listOutAllVersion()
+	case "default":
+		man.setDefaultVersion("")
 
 	default:
 		fmt.Printf("Unsupported action type: %s\n", man.ActionType)
 	}
 
+}
+
+func (man *Man) setDefaultVersion(version string) {
+	// ask user to enter the version if not provided
+	if version == "" {
+		version = tui.Input("Enter the version you want to set as default: ")
+		if version == "" {
+			fmt.Println("You didn't enter any version")
+			os.Exit(1)
+		}
+	} else {
+		confirm := tui.Input(fmt.Sprintf("Do you want to set %s as default version? [Y/N]", version))
+		if strings.ToLower(confirm) != "y" {
+			return
+		}
+	}
+
+	homePath, err := os.UserHomeDir()
+	if err != nil {
+		fmt.Printf("Error getting home directory: %s\n", err)
+		os.Exit(1)
+	}
+
+	defaultVersionLocation := homePath + fmt.Sprintf(DefaultVersionLocation, man.Candidate)
+	// reset default version to correct version
+	configData := LoadData()
+	currentDefaultVersion := ""
+	for _, config := range configData {
+		if config.Candidate == man.Candidate {
+			currentDefaultVersion = config.Current
+		}
+	}
+
+	err = os.Rename(defaultVersionLocation, fmt.Sprintf("%s%s/%s/%s", homePath, DefaultLocation, man.Candidate, currentDefaultVersion))
+	if err != nil && !os.IsNotExist(err) {
+		fmt.Printf("Error setting default version: %s\n", err)
+		os.Exit(1)
+	}
+
+	newVersionLocation := fmt.Sprintf("%s%s/%s/%s", homePath, DefaultLocation, man.Candidate, version)
+
+	err = os.Rename(newVersionLocation, defaultVersionLocation)
+	if err != nil && !os.IsNotExist(err) {
+		fmt.Printf("Error setting default version: %s\n", err)
+		os.Exit(1)
+	}
+	// update config file
+	UpdateDefaultVersionConfig(man.Candidate, version)
 }
 
 func (man *Man) listOutAllVersion() {
