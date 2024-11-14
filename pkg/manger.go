@@ -58,9 +58,9 @@ func saveData(configs []Config) {
 // UpdateDefaultVersionConfig will update current version for candidate -> Will be implemented later
 func UpdateDefaultVersionConfig(candidate string, defaultVersion string) {
 	configData := LoadData()
-	for _, config := range configData {
+	for i, config := range configData {
 		if config.Candidate == candidate {
-			config.Current = defaultVersion
+			configData[i].Current = defaultVersion
 			break
 		}
 	}
