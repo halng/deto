@@ -189,6 +189,11 @@ func (man *Man) installNewVersion() string {
 	data := fetchRegistryData(*man)
 
 	tui.Clear()
+	if len(data) == 0 {
+		fmt.Println("No version available for this candidate")
+		os.Exit(1)
+	}
+
 	listItem := make([]string, 0)
 	for i, item := range data {
 		listItem = append(listItem, fmt.Sprintf("%d| %s - %s - %s - Is LTS: %t", i+1, item.Name, item.Version, item.Provider, item.IsLTS))
@@ -275,7 +280,10 @@ func fetchRegistryData(man Man) []RegistryVersion {
 				fmt.Println("Error parsing registry version:", err)
 				os.Exit(1)
 			}
-			result = append(result, registry)
+
+			if strings.EqualFold(registry.Architecture, man.Architecture) {
+				result = append(result, registry)
+			}
 		}
 	}
 	p.Send(tea.Quit())
