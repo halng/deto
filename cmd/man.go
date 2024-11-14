@@ -34,13 +34,14 @@ import (
 // ManCmd represents the man command
 var manCmd = &cobra.Command{
 	Use:   "man",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "A Package Manager for Developers",
+	Long: `Deto is a package manager for developers. It helps you to install, remove, list, and set default versions of development tools.
+Available candidates: java, go
+Available actions: install, remove, list, default
+Let's combine them to use deto. 
+For example: deto man
+There will be a prompt to ask you to choose the candidate and action type. You just need to follow the instructions.
+	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		tui.Clear()
 

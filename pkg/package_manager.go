@@ -281,7 +281,7 @@ func fetchRegistryData(man Man) []RegistryVersion {
 				os.Exit(1)
 			}
 
-			if strings.ToLower(registry.Architecture) == strings.ToLower(man.Architecture) {
+			if strings.EqualFold(registry.Architecture, man.Architecture) {
 				result = append(result, registry)
 			}
 		}
