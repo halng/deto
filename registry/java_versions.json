@@ -28,6 +28,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "arm",
+      "checksum": "c555750ee41799d30553bd9744c1ab9b8e6b2a2ea83195619a11ef30cc4154f4",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u442-b06/OpenJDK8U-jdk_arm_linux_hotspot_8u442b06.tar.gz",
+      "name": "OpenJDK8U-jdk_arm_linux_hotspot_8u442b06.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "x64",
       "checksum": "abaaa90deadf51bd28921453baf2992b3dff6171bb7142f5bdd14ef269f7b245",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u432-b06/OpenJDK8U-jdk_x64_linux_hotspot_8u432b06.tar.gz",
@@ -2127,6 +2136,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "x32",
+      "checksum": "6050fb448819029cb3ce72204c61f6897369b0a19c69787c146b8f4b28359ed5",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u442-b06/OpenJDK8U-jdk_x86-32_windows_hotspot_8u442b06.zip",
+      "name": "OpenJDK8U-jdk_x86-32_windows_hotspot_8u442b06.zip",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "x64",
       "checksum": "7780436b818b3bf8be7b56832f9e3f1ab74233736c4c0e34b3ae7c32c95e966e",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u432-b06/OpenJDK8U-jdk_x64_windows_hotspot_8u432b06.zip",
@@ -2275,6 +2293,15 @@
       "checksum": "a221ae370f609f00e5869c385f4853fecb622a99f8637b95c22ec66c04e15051",
       "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%2B4/OpenJDK11U-jdk_x64_windows_hotspot_11.0.26_4.zip",
       "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.26_4.zip",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x32",
+      "checksum": "a0dff6153242717018fb7e9483d097c32d8b4b4ff0ee5e3183ff73d743c55c9a",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%2B4/OpenJDK11U-jdk_x86-32_windows_hotspot_11.0.26_4.zip",
+      "name": "OpenJDK11U-jdk_x86-32_windows_hotspot_11.0.26_4.zip",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -2883,6 +2910,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "aarch64",
+      "checksum": "f5dee715b12a0f0fb75bba53750854297d0bc337f88576ab4b3921c290f3d26c",
+      "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.2%2B7/OpenJDK23U-jdk_aarch64_windows_hotspot_23.0.2_7.zip",
+      "name": "OpenJDK23U-jdk_aarch64_windows_hotspot_23.0.2_7.zip",
+      "version": "23",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "x64",
       "checksum": "eb1bc62060f17566b160fae8ce876ada5d639e2fd4781009a1219e971b9937dd",
       "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.1%2B11/OpenJDK23U-jdk_x64_windows_hotspot_23.0.1_11.zip",
@@ -3006,15 +3042,6 @@
       "checksum": "b0142c2c85da43bb3565321164e8129b1166de5d6a43c88e567a92c39128c003",
       "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%2B4/OpenJDK11U-jdk_x64_mac_hotspot_11.0.26_4.tar.gz",
       "name": "OpenJDK11U-jdk_x64_mac_hotspot_11.0.26_4.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "aarch64",
-      "checksum": "c970e5917964da1b50c0029ba88a6fbe962783def4de6a8a2835af6a6859002c",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%2B4/OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.26_4.tar.gz",
-      "name": "OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.26_4.tar.gz",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -4512,6 +4539,15 @@
   "aix": [
     {
       "architecture": "ppc64",
+      "checksum": "4f221dc4e4ab7fbabb8719d499a6857b7155141864f9b03c730bc422a1e83b4f",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u442-b06/OpenJDK8U-jdk_ppc64_aix_hotspot_8u442b06.tar.gz",
+      "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u442b06.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
       "checksum": "ed425f5ea20fa76bfda8f50c6392a809185ee9837af1c4993411c6545dbac8c8",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jdk_ppc64_aix_hotspot_8u422b05.tar.gz",
       "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u422b05.tar.gz",
@@ -4570,6 +4606,15 @@
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64_aix_hotspot_8u362b09.tar.gz",
       "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u362b09.tar.gz",
       "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "b10ed28810ce66371aa65dcbdf749003848805438e49fe69fdcb358ad6260f5a",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%2B4/OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.26_4.tar.gz",
+      "name": "OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.26_4.tar.gz",
+      "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
     },
@@ -4714,6 +4759,15 @@
       "link": "https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.2%2B9/OpenJDK22U-jdk_ppc64_aix_hotspot_22.0.2_9.tar.gz",
       "name": "OpenJDK22U-jdk_ppc64_aix_hotspot_22.0.2_9.tar.gz",
       "version": "22",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "c26832afb1ef2453d90b7afad08936c10f430bf8bcf7b496aee4fa4e39432b1d",
+      "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.2%2B7/OpenJDK23U-jdk_ppc64_aix_hotspot_23.0.2_7.tar.gz",
+      "name": "OpenJDK23U-jdk_ppc64_aix_hotspot_23.0.2_7.tar.gz",
+      "version": "23",
       "is_lts": false,
       "provider": "Adoptium"
     },
