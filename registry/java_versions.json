@@ -3047,6 +3047,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "aarch64",
+      "checksum": "c970e5917964da1b50c0029ba88a6fbe962783def4de6a8a2835af6a6859002c",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%2B4/OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.26_4.tar.gz",
+      "name": "OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.26_4.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "x64",
       "checksum": "fa6f88ebd8c3d2b4f5146cd45e4ef875cb2d073b6e95b60de86a1ce0bfdb463a",
       "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.25%2B9/OpenJDK11U-jdk_x64_mac_hotspot_11.0.25_9.tar.gz",
