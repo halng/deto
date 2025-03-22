@@ -2150,6 +2150,24 @@
       "version": "24",
       "is_lts": false,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "riscv64",
+      "checksum": "a1d993ab0b4b80101ec2e2452bdd37735572b734c255576a47c5130eab55f09a",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24%2B36/OpenJDK24U-jdk_riscv64_linux_hotspot_24_36.tar.gz",
+      "name": "OpenJDK24U-jdk_riscv64_linux_hotspot_24_36.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "s390x",
+      "checksum": "e3149dc2ab1db0bdf86ab8d27a5ad67e32e30c829cef8a02628d36e5781f44ff",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24%2B36/OpenJDK24U-jdk_s390x_linux_hotspot_24_36.tar.gz",
+      "name": "OpenJDK24U-jdk_s390x_linux_hotspot_24_36.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
     }
   ],
   "windows": [
