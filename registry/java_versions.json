@@ -775,6 +775,33 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "aarch64",
+      "checksum": "0db0d6cbe33238f33aa52837b1dc8fc6067b34d206b3e0f9243c7f8c9b9539a5",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.15_6.tar.gz",
+      "name": "OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.15_6.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "9616877c733c9249328ea9bd83a5c8c30e0f9a7af180cac8ffda9034161c2df2",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jdk_x64_linux_hotspot_17.0.15_6.tar.gz",
+      "name": "OpenJDK17U-jdk_x64_linux_hotspot_17.0.15_6.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "arm",
+      "checksum": "8a3c859355f898c119d154e4caf867263e0e4c8065a91d63ae10666c19bc1108",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jdk_arm_linux_hotspot_17.0.15_6.tar.gz",
+      "name": "OpenJDK17U-jdk_arm_linux_hotspot_17.0.15_6.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "ppc64le",
       "checksum": "f4cb9ee5906a44d110fa381310cd7181d95498d27087d449e7e9b74bddd9def2",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.14_7.tar.gz",
@@ -1171,51 +1198,6 @@
       "provider": "Adoptium"
     },
     {
-      "architecture": "x64",
-      "checksum": "e9458b38e97358850902c2936a1bb5f35f6cffc59da9fcd28c63eab8dbbfbc3b",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "aarch64",
-      "checksum": "0084272404b89442871e0a1f112779844090532978ad4d4191b8d03fc6adfade",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.7_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64le",
-      "checksum": "8f4366ff1eddb548b1744cd82a1a56ceee60abebbcbad446bfb3ead7ac0f0f85",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.7_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "arm",
-      "checksum": "e7a84c3e59704588510d7e6cce1f732f397b54a3b558c521912a18a1b4d0abdc",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_arm_linux_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_arm_linux_hotspot_17.0.7_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "s390x",
-      "checksum": "2d75540ae922d0c4162729267a8c741e2414881a468fd2ce4140b4069ba47ca9",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_s390x_linux_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_s390x_linux_hotspot_17.0.7_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
       "architecture": "aarch64",
       "checksum": "262be608e266fd76d7496af83b2832be853c3aaf7460d6a4da198cd40db74553",
       "link": "https://github.com/adoptium/temurin18-binaries/releases/download/jdk-18.0.2.1%2B1/OpenJDK18U-jdk_aarch64_linux_hotspot_18.0.2.1_1.tar.gz",
@@ -1591,6 +1573,15 @@
       "name": "OpenJDK20U-jdk_ppc64le_linux_hotspot_20_36.tar.gz",
       "version": "20",
       "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "974d3acef0b7193f541acb61b76e81670890551366625d4f6ca01b91ac152ce0",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_x64_linux_hotspot_21.0.7_6.tar.gz",
+      "name": "OpenJDK21U-jdk_x64_linux_hotspot_21.0.7_6.tar.gz",
+      "version": "21",
+      "is_lts": true,
       "provider": "Adoptium"
     },
     {
@@ -2125,6 +2116,24 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "x64",
+      "checksum": "78832cb5ea4074f2215cde0d01d6192d09c87636fc24b36647aea61fb23b8272",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_x64_linux_hotspot_24.0.1_9.tar.gz",
+      "name": "OpenJDK24U-jdk_x64_linux_hotspot_24.0.1_9.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "a598260e340028d9b2383c23df16aa286769a661bd3bf28a52e8c1a5774b1110",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.1_9.tar.gz",
+      "name": "OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.1_9.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "aarch64",
       "checksum": "18071047526ab4b53131f9bb323e8703485ae37fcb2f2c5ef0f1b7bab66d1b94",
       "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24%2B36/OpenJDK24U-jdk_aarch64_linux_hotspot_24_36.tar.gz",
@@ -2515,6 +2524,15 @@
     },
     {
       "architecture": "x64",
+      "checksum": "118cf8d586ee3200e2d2e6e49717db4fb1a22005700fbf85f06166046ec74863",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jdk_x64_windows_hotspot_17.0.15_6.zip",
+      "name": "OpenJDK17U-jdk_x64_windows_hotspot_17.0.15_6.zip",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
       "checksum": "dddb108e0bf8c3e3a9c5c782fee5874a6a86d5323189969f17094260cf3a1125",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.14_7.zip",
       "name": "OpenJDK17U-jdk_x64_windows_hotspot_17.0.14_7.zip",
@@ -2662,24 +2680,6 @@
       "checksum": "12f210d6beb3c3573c14525242144aae15cdc27f29401698a065375eab0c91d0",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x86-32_windows_hotspot_17.0.8_7.zip",
       "name": "OpenJDK17U-jdk_x86-32_windows_hotspot_17.0.8_7.zip",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
-      "checksum": "daab0bac6681e8dbf7bce071c2d6b1b6feaf7479897871a705d10f5f0873d299",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.7_7.zip",
-      "name": "OpenJDK17U-jdk_x64_windows_hotspot_17.0.7_7.zip",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x32",
-      "checksum": "1174dda2dadaf611436fd09aaef52b8dcafc1aa71b4c225e0a34ce0597d574dd",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_x86-32_windows_hotspot_17.0.7_7.zip",
-      "name": "OpenJDK17U-jdk_x86-32_windows_hotspot_17.0.7_7.zip",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
@@ -3273,6 +3273,15 @@
     },
     {
       "architecture": "aarch64",
+      "checksum": "1a2fa2bb9ea059cf2c1ab3e296a98e006fb6fdad2bd19ce52df48794eaa1836a",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.15_6.tar.gz",
+      "name": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.15_6.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
       "checksum": "95bcc8052340394b87644d71a60fb26f31857f4090a7dfee57113e9e0f2dfacb",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.14%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.14_7.tar.gz",
       "name": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.14_7.tar.gz",
@@ -3411,24 +3420,6 @@
       "checksum": "105d1ada42927fccde215e8c80b43221cd5aad42e6183819c367234ac062fc10",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.8_7.tar.gz",
       "name": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.8_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "aarch64",
-      "checksum": "1d6aeb55b47341e8ec33cc1644d58b88dfdcce17aa003a858baa7460550e6ff9",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.7_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
-      "checksum": "50d0e9840113c93916418068ba6c845f1a72ed0dab80a8a1f7977b0e658b65fb",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_x64_mac_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_x64_mac_hotspot_17.0.7_7.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
@@ -3611,6 +3602,24 @@
       "name": "OpenJDK20U-jdk_aarch64_mac_hotspot_20_36.tar.gz",
       "version": "20",
       "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "6fcb25f3f71a5ff245dec4ebe8bd5c643f179a5cd0a61c08e58a8c65914d2f97",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.7_6.tar.gz",
+      "name": "OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.7_6.tar.gz",
+      "version": "21",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "8e6d876f60bc8b7866e91222ba9f27a78e5102d7a4ce4a6e915f95fe539b66ed",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_x64_mac_hotspot_21.0.7_6.tar.gz",
+      "name": "OpenJDK21U-jdk_x64_mac_hotspot_21.0.7_6.tar.gz",
+      "version": "21",
+      "is_lts": true,
       "provider": "Adoptium"
     },
     {
@@ -3844,6 +3853,15 @@
       "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23%2B37/OpenJDK23U-jdk_aarch64_mac_hotspot_23_37.tar.gz",
       "name": "OpenJDK23U-jdk_aarch64_mac_hotspot_23_37.tar.gz",
       "version": "23",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "181593f79dd278e0f44712cd87fd9874fd191e211810a0712450963370badb0a",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_x64_mac_hotspot_24.0.1_9.tar.gz",
+      "name": "OpenJDK24U-jdk_x64_mac_hotspot_24.0.1_9.tar.gz",
+      "version": "24",
       "is_lts": false,
       "provider": "Adoptium"
     },
@@ -4106,15 +4124,6 @@
       "checksum": "90eb413eeed9cc2813f7d66d348c35475148c0cdc41c8f9ef2f26d51078e287e",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x64_alpine-linux_hotspot_17.0.8_7.tar.gz",
       "name": "OpenJDK17U-jdk_x64_alpine-linux_hotspot_17.0.8_7.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
-      "checksum": "b6edac2fa669876ef16b4895b36b61d01066626e7a69feba2acc19760c8d18cb",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_x64_alpine-linux_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_x64_alpine-linux_hotspot_17.0.7_7.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
@@ -4785,15 +4794,6 @@
       "checksum": "214bdd60d7b31fde693b44aed0611489a544b8f9822439989a425f3f1cd6810c",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8.1%2B1/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.8.1_1.tar.gz",
       "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.8.1_1.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "cd159485647e1bade0c13fbbd3e1b63a0fa3ced297733567f89febd3e0e291db",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.7_7.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.7_7.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
