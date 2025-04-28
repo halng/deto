@@ -28,6 +28,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "arm",
+      "checksum": "a467f86d0dc4c9077edeac5eeae0622a556399180628eee6969c745afb1deaf0",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u452-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u452b09.tar.gz",
+      "name": "OpenJDK8U-jdk_arm_linux_hotspot_8u452b09.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "aarch64",
       "checksum": "1d1662bd8ca7edc9281c723d9eebafea940e6a41464bdc43a83b564bc974c7e5",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u442-b06/OpenJDK8U-jdk_aarch64_linux_hotspot_8u442b06.tar.gz",
