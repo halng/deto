@@ -4289,6 +4289,15 @@
       "version": "23",
       "is_lts": false,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "532d2d6d19579d07bc9a303f9cac7b65a3c1524660e12dec1ebb62e1f746cac4",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9.1/OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
+      "name": "OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
     }
   ],
   "alpine-linux": [
