@@ -687,6 +687,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "ppc64le",
+      "checksum": "3e4dbc94ebd299b60d8168b1d33cdae1f619db9403aaefd65d0b643615d596cc",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u462b08.tar.gz",
+      "name": "OpenJDK8U-jdk_ppc64le_linux_hotspot_8u462b08.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "aarch64",
       "checksum": "d8a1aecea0913b7a1e0d737ba6f7ea99059b3f6fd17813d4a24e8b3fc3aee278",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u452-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u452b09.tar.gz",
@@ -2883,6 +2892,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "aarch64",
+      "checksum": "6f8725d186d05c627176db9c46c732a6ef3ba41d9e9b3775c4727fc8ac642bb2",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.2_12.tar.gz",
+      "name": "OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.2_12.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "x64",
       "checksum": "78832cb5ea4074f2215cde0d01d6192d09c87636fc24b36647aea61fb23b8272",
       "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_x64_linux_hotspot_24.0.1_9.tar.gz",
@@ -2974,6 +2992,15 @@
     }
   ],
   "windows": [
+    {
+      "architecture": "x32",
+      "checksum": "a14fe48dfb47400b89a2b5b15bb0553139cb6c39b37df7821619fa1af43d3828",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x86-32_windows_hotspot_8u462b08.zip",
+      "name": "OpenJDK8U-jdk_x86-32_windows_hotspot_8u462b08.zip",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
     {
       "architecture": "x64",
       "checksum": "732f9e6015d6b0996ec5bae7e824996843295b366ea734557a158d87a7b8845b",
@@ -4700,6 +4727,15 @@
       "checksum": "db2ba6f72c19ad8b742303a504f58474bceeb94174a185de5f095c1d45577f1c",
       "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_aarch64_mac_hotspot_24.0.2_12.tar.gz",
       "name": "OpenJDK24U-jdk_aarch64_mac_hotspot_24.0.2_12.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "4f63497563f6f0eb109f6898bb2e45e6cb428a6e4abe0772698493e373e8f0c7",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_x64_mac_hotspot_24.0.2_12.tar.gz",
+      "name": "OpenJDK24U-jdk_x64_mac_hotspot_24.0.2_12.tar.gz",
       "version": "24",
       "is_lts": false,
       "provider": "Adoptium"
