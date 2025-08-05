@@ -696,6 +696,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "arm",
+      "checksum": "c4f29a65ca6c4c211e3af645e3fcbd9e8f0c2b8ab2b738973237f08e4dc38310",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u462b08.tar.gz",
+      "name": "OpenJDK8U-jdk_arm_linux_hotspot_8u462b08.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "aarch64",
       "checksum": "d8a1aecea0913b7a1e0d737ba6f7ea99059b3f6fd17813d4a24e8b3fc3aee278",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u452-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u452b09.tar.gz",
@@ -2928,6 +2937,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "s390x",
+      "checksum": "555059f4929ab6435eb83b496d0b969bc6a9a5c07915d5f7607f5d833e38fb39",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_s390x_linux_hotspot_24.0.2_12.tar.gz",
+      "name": "OpenJDK24U-jdk_s390x_linux_hotspot_24.0.2_12.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "x64",
       "checksum": "78832cb5ea4074f2215cde0d01d6192d09c87636fc24b36647aea61fb23b8272",
       "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9/OpenJDK24U-jdk_x64_linux_hotspot_24.0.1_9.tar.gz",
@@ -4841,6 +4859,15 @@
     }
   ],
   "aix": [
+    {
+      "architecture": "ppc64",
+      "checksum": "dc20d8fb34bd139c1c87ab7dafcdbeb7caa7ad7254de6fd234743106ba1227f1",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_ppc64_aix_hotspot_8u462b08.tar.gz",
+      "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u462b08.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
     {
       "architecture": "ppc64",
       "checksum": "688358d3198979516ec9ad3a818e161a61d74f4519978defd046bffac857f902",
