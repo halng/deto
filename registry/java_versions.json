@@ -3972,6 +3972,15 @@
       "version": "24",
       "is_lts": false,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "ff76428a600a0925abbfb1dc55da30828b500f8038a13679a8c75b37892a96c3",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_x64_windows_hotspot_25_36.zip",
+      "name": "OpenJDK25U-jdk_x64_windows_hotspot_25_36.zip",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
     }
   ],
   "mac": [
@@ -4909,6 +4918,15 @@
       "name": "OpenJDK24U-jdk_x64_mac_hotspot_24_36.tar.gz",
       "version": "24",
       "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "9eca779ae00a5e2e06744ed096be91ec52c2f545d8d9495e5b57fa2892bcca20",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_x64_mac_hotspot_25_36.tar.gz",
+      "name": "OpenJDK25U-jdk_x64_mac_hotspot_25_36.tar.gz",
+      "version": "25",
+      "is_lts": true,
       "provider": "Adoptium"
     }
   ],
