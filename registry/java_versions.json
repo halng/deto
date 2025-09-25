@@ -4928,6 +4928,15 @@
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "6630ea0f19db61843a8fa84a84b2c71cd120c4155bb5a0e42a74593b0d70fee4",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_aarch64_mac_hotspot_25_36.tar.gz",
+      "name": "OpenJDK25U-jdk_aarch64_mac_hotspot_25_36.tar.gz",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
     }
   ],
   "aix": [
