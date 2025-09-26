@@ -3088,6 +3088,15 @@
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "95716d04bdfc8b10c94f4448ea8d57a3ba872d98b53c752e4c6b48f1c95bc582",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_aarch64_linux_hotspot_25_36.tar.gz",
+      "name": "OpenJDK25U-jdk_aarch64_linux_hotspot_25_36.tar.gz",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
     }
   ],
   "windows": [
