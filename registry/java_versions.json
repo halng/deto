@@ -2280,6 +2280,15 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "riscv64",
+      "checksum": "ac411d52862fe8a4a48a6c3546bebced8f4879cd728746fc4ee4b06151aa9f8b",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/OpenJDK21U-jdk_riscv64_linux_hotspot_21.0.9_10.tar.gz",
+      "name": "OpenJDK21U-jdk_riscv64_linux_hotspot_21.0.9_10.tar.gz",
+      "version": "21",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "aarch64",
       "checksum": "e5c41a1ab0865ea5de9b4529bf8526005f1d4593090845387d14fe450ce39c33",
       "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.8%2B9/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.8_9.tar.gz",
@@ -5086,6 +5095,15 @@
     },
     {
       "architecture": "ppc64",
+      "checksum": "3efeded404ac566c7ba4d0abcefb1762f2af0500a04ba51cb69393c667fba14b",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.9_10.tar.gz",
+      "name": "OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.9_10.tar.gz",
+      "version": "21",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
       "checksum": "c4949ed2d75915be1c11329b04d0077b9b569eabeeb3d32c1bdf638d526fb082",
       "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.8%2B9/OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.8_9.tar.gz",
       "name": "OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.8_9.tar.gz",
@@ -5199,6 +5217,15 @@
       "name": "OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
       "version": "24",
       "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "f6b5f55777f3dbd9d236c640a0762955fd8eb37d1298feed74b0806fc082ba16",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.1%2B8/OpenJDK25U-jdk_ppc64_aix_hotspot_25.0.1_8.tar.gz",
+      "name": "OpenJDK25U-jdk_ppc64_aix_hotspot_25.0.1_8.tar.gz",
+      "version": "25",
+      "is_lts": true,
       "provider": "Adoptium"
     },
     {
