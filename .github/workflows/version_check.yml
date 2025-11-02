@@ -25,6 +25,10 @@ jobs:
         run: |
           python update_registry.py
         working-directory: scripts
+      - name: Validate registry
+        run: |
+          python validate_registry.py
+        working-directory: scripts
       - uses: dorny/paths-filter@v3
         id: changes
         with:
