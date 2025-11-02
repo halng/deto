@@ -3273,6 +3273,15 @@
     },
     {
       "architecture": "x64",
+      "checksum": "c21b63f6391b9d8f8aa969fb99250de797539cfb54232f5d4d371993f0c235b5",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.29_7.zip",
+      "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.29_7.zip",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
       "checksum": "1422b070f94c93d3fdba7e0bcaa269389c92a928de54e47d988a1002d3a35dc2",
       "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_x64_windows_hotspot_11.0.28_6.zip",
       "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.28_6.zip",
