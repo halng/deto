@@ -5,19 +5,20 @@ import re
 def validate_go_versions():
     """
     Validates Go versions in the registry by:
-    1. Checking if versions are stable
-    2. Verifying version format
-    3. Checking if download links are accessible
+    1. Verifying version format
+    2. Checking is_stable field exists
+    3. Validating against API data
     """
     print("Validating Go versions...")
     
     # Fetch current data from API
     GET_ALL_VERSIONS_API = "https://go.dev/dl"
-    response = requests.get(f"{GET_ALL_VERSIONS_API}/?mode=json")
+    response = requests.get(f"{GET_ALL_VERSIONS_API}/?mode=json&include=all")
     api_versions = response.json()
     
-    # Get only stable versions
-    stable_versions = [v for v in api_versions if v.get('stable', False)]
+    # Get all versions from API
+    all_api_versions = {v['version'] for v in api_versions}
+    stable_versions = {v['version'] for v in api_versions if v.get('stable', False)}
     
     print(f"Found {len(api_versions)} total versions in API")
     print(f"Found {len(stable_versions)} stable versions in API")
@@ -28,26 +29,42 @@ def validate_go_versions():
     
     # Count entries
     total_entries = sum(len(versions) for versions in current_registry.values())
-    print(f"Current registry has {total_entries} entries")
+    unique_versions = set()
+    stable_count = 0
     
-    # Get list of stable version numbers
-    stable_version_numbers = {v['version'] for v in stable_versions}
-    print(f"Stable versions: {sorted(stable_version_numbers)}")
+    print(f"Current registry has {total_entries} entries")
     
     # Check each entry in registry
     invalid_entries = []
     for os_name, versions in current_registry.items():
         for entry in versions:
-            if entry['version'] not in stable_version_numbers:
+            version = entry.get('version')
+            unique_versions.add(version)
+            
+            # Check if is_stable field exists
+            if 'is_stable' not in entry:
                 invalid_entries.append({
                     'os': os_name,
-                    'version': entry['version'],
-                    'reason': 'Not a stable version'
+                    'version': version,
+                    'reason': 'Missing is_stable field'
+                })
+            else:
+                if entry['is_stable']:
+                    stable_count += 1
+            
+            # Check if version exists in API
+            if version not in all_api_versions:
+                invalid_entries.append({
+                    'os': os_name,
+                    'version': version,
+                    'reason': 'Version not found in API'
                 })
     
+    print(f"Unique versions in registry: {len(unique_versions)}")
+    print(f"Stable entries: {stable_count}, Unstable entries: {total_entries - stable_count}")
     print(f"Found {len(invalid_entries)} invalid entries")
     
-    return stable_versions, invalid_entries
+    return api_versions, invalid_entries
 
 def validate_java_versions():
     """
