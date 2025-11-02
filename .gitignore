@@ -27,3 +27,8 @@ go.work.sum
 deto
 
 .idea
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
