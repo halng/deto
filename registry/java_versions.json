@@ -426,19 +426,10 @@
       "provider": "Adoptium"
     },
     {
-      "architecture": "arm",
-      "checksum": "b33c99068804bbd7e4aa4bd1c5419ae88ec77833e5e5339ab06a00546a2b0711",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_arm_linux_hotspot_11.0.28_6.tar.gz",
-      "name": "OpenJDK11U-jdk_arm_linux_hotspot_11.0.28_6.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "arm",
-      "checksum": "5eb00b18e37757775e6f46c706eae38d9e91be49de5712987801cba8ffd77767",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.27%2B6/OpenJDK11U-jdk_arm_linux_hotspot_11.0.27_6.tar.gz",
-      "name": "OpenJDK11U-jdk_arm_linux_hotspot_11.0.27_6.tar.gz",
+      "architecture": "ppc64le",
+      "checksum": "d6136c0baafd588ba4f9be9f81285052f03b5366868e98fcd38fa5fb43c9121d",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.29_7.tar.gz",
+      "name": "OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.29_7.tar.gz",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -453,10 +444,19 @@
       "provider": "Adoptium"
     },
     {
-      "architecture": "ppc64le",
-      "checksum": "9407ecef765ec681fb187f084f1e029001abd5baf7a13b32067e9cbdfb140130",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.27%2B6/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.27_6.tar.gz",
-      "name": "OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.27_6.tar.gz",
+      "architecture": "arm",
+      "checksum": "b33c99068804bbd7e4aa4bd1c5419ae88ec77833e5e5339ab06a00546a2b0711",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_arm_linux_hotspot_11.0.28_6.tar.gz",
+      "name": "OpenJDK11U-jdk_arm_linux_hotspot_11.0.28_6.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "arm",
+      "checksum": "5eb00b18e37757775e6f46c706eae38d9e91be49de5712987801cba8ffd77767",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.27%2B6/OpenJDK11U-jdk_arm_linux_hotspot_11.0.27_6.tar.gz",
+      "name": "OpenJDK11U-jdk_arm_linux_hotspot_11.0.27_6.tar.gz",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -589,9 +589,9 @@
     },
     {
       "architecture": "ppc64le",
-      "checksum": "eb020f74e00870379522be0b44fc6322c2214e77971c258400c8b5af704d5c0a",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.16_8.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.16_8.tar.gz",
+      "checksum": "2a29d1be61940c1bd639018c07f4622e1f145a7ef34e7294fee877e39226d9da",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.17_10.tar.gz",
+      "name": "OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.17_10.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
