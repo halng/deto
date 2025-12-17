@@ -1,6 +1,15 @@
 {
   "aix": [
     {
+      "version": "go1.26rc1",
+      "architecture": "ppc64",
+      "name": "go1.26rc1.aix-ppc64.tar.gz",
+      "checksum": "4f5b811e2ae0aa097f3361ee17a2ae3f6b3c49c41e38c8af72faba5eb59f3d92",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.aix-ppc64.tar.gz"
+    },
+    {
       "version": "go1.25.5",
       "architecture": "ppc64",
       "name": "go1.25.5.aix-ppc64.tar.gz",
@@ -641,6 +650,24 @@
     }
   ],
   "darwin": [
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.darwin-amd64.tar.gz",
+      "checksum": "c76b80ef28866b653f94525c79425e8dd19b9afbca54fffa7e02ecb1c49d465b",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.darwin-amd64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm64",
+      "name": "go1.26rc1.darwin-arm64.tar.gz",
+      "checksum": "f5b40648e5a1a6d1b078628d63f1feb928b76d8f43b78166532c03f53715ff4d",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.darwin-arm64.tar.gz"
+    },
     {
       "version": "go1.25.5",
       "architecture": "amd64",
@@ -5414,6 +5441,15 @@
   ],
   "dragonfly": [
     {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.dragonfly-amd64.tar.gz",
+      "checksum": "7718ef3b7f95fbc66b842eb49363a88d28ba1050c7357891e923b340a4cd0541",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.dragonfly-amd64.tar.gz"
+    },
+    {
       "version": "go1.25.5",
       "architecture": "amd64",
       "name": "go1.25.5.dragonfly-amd64.tar.gz",
@@ -6054,6 +6090,42 @@
     }
   ],
   "freebsd": [
+    {
+      "version": "go1.26rc1",
+      "architecture": "386",
+      "name": "go1.26rc1.freebsd-386.tar.gz",
+      "checksum": "323061a2250b8e66ffbcc8fddae50011bb5fd9d104ffe96dd81ddf9616a5b94e",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.freebsd-386.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.freebsd-amd64.tar.gz",
+      "checksum": "6603e1af32f322ee4804bfe969bae186800064783a2c2de134454b23c4157a94",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.freebsd-amd64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm",
+      "name": "go1.26rc1.freebsd-arm.tar.gz",
+      "checksum": "e40eb4d7bc5a975b1c354f8c0d8827288c0c0795339202b07f15be4e0fa44152",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.freebsd-arm.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm64",
+      "name": "go1.26rc1.freebsd-arm64.tar.gz",
+      "checksum": "d89825004e3a2319799d7df897d1184a0fd4bba9bcd6bd0ea49805057d9e8a29",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.freebsd-arm64.tar.gz"
+    },
     {
       "version": "go1.25.5",
       "architecture": "386",
@@ -13905,6 +13977,15 @@
   ],
   "illumos": [
     {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.illumos-amd64.tar.gz",
+      "checksum": "fab13bfe278ec4b055a69c49a20d4eec57cc57e2c6053508757126b7097578bb",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.illumos-amd64.tar.gz"
+    },
+    {
       "version": "go1.25.5",
       "architecture": "amd64",
       "name": "go1.25.5.illumos-amd64.tar.gz",
@@ -14545,6 +14626,123 @@
     }
   ],
   "linux": [
+    {
+      "version": "go1.26rc1",
+      "architecture": "386",
+      "name": "go1.26rc1.linux-386.tar.gz",
+      "checksum": "88766dabe34bf9b8a422e5a0788b695a27f0c45b4ce3c1c293ec948d72577f34",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-386.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.linux-amd64.tar.gz",
+      "checksum": "b395b5d51d45cf2a19e61855edd7bafaa2dfeaafaf8d9649cb3262fd8b81a96a",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-amd64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm64",
+      "name": "go1.26rc1.linux-arm64.tar.gz",
+      "checksum": "b254925e2bc55467595e9d9b15a4f61a9102d763a92a972c853e471f0e8365a9",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-arm64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "armv6l",
+      "name": "go1.26rc1.linux-armv6l.tar.gz",
+      "checksum": "53cb2acc73ae9fe6ca1c94c6798abcdf3ed879202f9bd968f6e1ab0aa23b8212",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-armv6l.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "loong64",
+      "name": "go1.26rc1.linux-loong64.tar.gz",
+      "checksum": "7449ed873f5b8a04bc8f9e9a121ac7731925f8246c6b24e2fab6d6e9bad428fe",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-loong64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "mips",
+      "name": "go1.26rc1.linux-mips.tar.gz",
+      "checksum": "d0c6f3e2ced43c73e0867df68d631537f407a9a3bed0f74b078431b2b22a203c",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-mips.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "mips64",
+      "name": "go1.26rc1.linux-mips64.tar.gz",
+      "checksum": "f1d1da2714b347b95607187c75efc7b07c1545c14847cdb7700a49e233d03f53",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-mips64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "mips64le",
+      "name": "go1.26rc1.linux-mips64le.tar.gz",
+      "checksum": "6a554f2c60e67dec8d0ee2fa7b3ecded4773113599e06ca126fb2de87438ea27",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-mips64le.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "mipsle",
+      "name": "go1.26rc1.linux-mipsle.tar.gz",
+      "checksum": "8c2eff812a9d46c24f571fbaa5f68e1bbdadb9e9dccb1707e021184efbf00de2",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-mipsle.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "ppc64",
+      "name": "go1.26rc1.linux-ppc64.tar.gz",
+      "checksum": "4ff875138be10eab1558ee9d28e2da0c79a4bc601a25c6c25e637ce870528386",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-ppc64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "ppc64le",
+      "name": "go1.26rc1.linux-ppc64le.tar.gz",
+      "checksum": "56ea825c6f3ded35af6109108daa14935f31ef7abbf8f410a8a0a428bc6e6de2",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-ppc64le.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "riscv64",
+      "name": "go1.26rc1.linux-riscv64.tar.gz",
+      "checksum": "00ce26401dd50045ca398128a9de1d91fbafbb38cb7706d9c64c13619c6439b3",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-riscv64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "s390x",
+      "name": "go1.26rc1.linux-s390x.tar.gz",
+      "checksum": "a34cd098dea5c1f53b366a1c6070ab42000437a618696d293e2023a5f91c3df8",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.linux-s390x.tar.gz"
+    },
     {
       "version": "go1.25.5",
       "architecture": "386",
@@ -35716,6 +35914,42 @@
   ],
   "netbsd": [
     {
+      "version": "go1.26rc1",
+      "architecture": "386",
+      "name": "go1.26rc1.netbsd-386.tar.gz",
+      "checksum": "390b6a18e9bbb572420fe4a62a193ddd97910881ca51289780f26af770461c46",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.netbsd-386.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.netbsd-amd64.tar.gz",
+      "checksum": "e43ed673ef4ca55ea15a4fed7176ec80d11f72e17d8779ac7616515cb0da9f13",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.netbsd-amd64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm",
+      "name": "go1.26rc1.netbsd-arm.tar.gz",
+      "checksum": "8bb20bf5dc3fb67fae2aff4231734ca78c0779537e88f3b4d260ddf123bcd088",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.netbsd-arm.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm64",
+      "name": "go1.26rc1.netbsd-arm64.tar.gz",
+      "checksum": "7dad8a44812c97623582eae0649b6c173ab7aa4839ef78c3048e7a9a28d27edc",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.netbsd-arm64.tar.gz"
+    },
+    {
       "version": "go1.25.5",
       "architecture": "386",
       "name": "go1.25.5.netbsd-386.tar.gz",
@@ -38273,6 +38507,60 @@
     }
   ],
   "openbsd": [
+    {
+      "version": "go1.26rc1",
+      "architecture": "386",
+      "name": "go1.26rc1.openbsd-386.tar.gz",
+      "checksum": "fab18229a2f0040c6af5fe0347f4d0890597048225a47dc63149e79f5073df97",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.openbsd-386.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.openbsd-amd64.tar.gz",
+      "checksum": "5a1d36411a98c0a455fb8dab602f873610117f3b7a75db2f91b592013875e726",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.openbsd-amd64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm",
+      "name": "go1.26rc1.openbsd-arm.tar.gz",
+      "checksum": "202dffaca18995227f04e0cec1118774b3d093cc5f8235f8eac5c064017fdd2a",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.openbsd-arm.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm64",
+      "name": "go1.26rc1.openbsd-arm64.tar.gz",
+      "checksum": "54b345063234d1c0ad29675546fc9fe68b712f76bede882904582348da6e17ec",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.openbsd-arm64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "ppc64",
+      "name": "go1.26rc1.openbsd-ppc64.tar.gz",
+      "checksum": "126429c53828e2a20d9aaf1f93a27a7f8968db2aff1eda44de750a75327caf82",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.openbsd-ppc64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "riscv64",
+      "name": "go1.26rc1.openbsd-riscv64.tar.gz",
+      "checksum": "16850003f8e1dd947f637eb6f5d0b3981d0c24d5e71acf09c699970413b113fc",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.openbsd-riscv64.tar.gz"
+    },
     {
       "version": "go1.25.5",
       "architecture": "386",
@@ -41615,6 +41903,33 @@
   ],
   "plan9": [
     {
+      "version": "go1.26rc1",
+      "architecture": "386",
+      "name": "go1.26rc1.plan9-386.tar.gz",
+      "checksum": "b9a74ce8828381e1596b7598e4200e219383891504109a02c34c326bc7a87eaa",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.plan9-386.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.plan9-amd64.tar.gz",
+      "checksum": "186624e809429e7510d284cd9ccc6c3dfbaf8d016d3d0d862cbbde918a73dbaa",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.plan9-amd64.tar.gz"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm",
+      "name": "go1.26rc1.plan9-arm.tar.gz",
+      "checksum": "be1d1760aed02b176393e8cf0f3ea4a9c7031b415daad13bbdb39aceec2c0b3c",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.plan9-arm.tar.gz"
+    },
+    {
       "version": "go1.25.5",
       "architecture": "386",
       "name": "go1.25.5.plan9-386.tar.gz",
@@ -43534,6 +43849,15 @@
   ],
   "solaris": [
     {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.solaris-amd64.tar.gz",
+      "checksum": "41dac4db0da39a41ae97d64d3b50789ba18b5c2addccbb3506f40aa9ad6b07d6",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.solaris-amd64.tar.gz"
+    },
+    {
       "version": "go1.25.5",
       "architecture": "amd64",
       "name": "go1.25.5.solaris-amd64.tar.gz",
@@ -44174,6 +44498,33 @@
     }
   ],
   "windows": [
+    {
+      "version": "go1.26rc1",
+      "architecture": "386",
+      "name": "go1.26rc1.windows-386.zip",
+      "checksum": "c159db658e377933e98fd113543698364c3927829fa20b1dd9e8322959a262bb",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.windows-386.zip"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "amd64",
+      "name": "go1.26rc1.windows-amd64.zip",
+      "checksum": "9ed44ba3588e41c3f54dd6c5e1554a34b2fee35b811358edd29fefaad74e96bc",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.windows-amd64.zip"
+    },
+    {
+      "version": "go1.26rc1",
+      "architecture": "arm64",
+      "name": "go1.26rc1.windows-arm64.zip",
+      "checksum": "f1bb0566ac618b58900e61f1a7f8183d0663dee15b2c1c8aa204c0c824c838a3",
+      "provider": "Open Source",
+      "is_stable": false,
+      "link": "https://go.dev/dl/go1.26rc1.windows-arm64.zip"
+    },
     {
       "version": "go1.25.5",
       "architecture": "386",
