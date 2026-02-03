@@ -20,6 +20,15 @@
     },
     {
       "architecture": "x64",
+      "checksum": "e74becad56b4cc01f1556a671e578d3788789f5257f9499f6fbed84e63a55ecf",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u482-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u482b08.tar.gz",
+      "name": "OpenJDK8U-jdk_x64_linux_hotspot_8u482b08.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
       "checksum": "5becaa4ac660e844c5a39e2ebc39ff5ac824c37ff1b625af8c8b111dc13c3592",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u472b08.tar.gz",
       "name": "OpenJDK8U-jdk_x64_linux_hotspot_8u472b08.tar.gz",
@@ -28,10 +37,10 @@
       "provider": "Adoptium"
     },
     {
-      "architecture": "x64",
-      "checksum": "5d64ae542b59a962b3caadadd346f4b1c3010879a28bb02d928326993de16e79",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u462b08.tar.gz",
-      "name": "OpenJDK8U-jdk_x64_linux_hotspot_8u462b08.tar.gz",
+      "architecture": "aarch64",
+      "checksum": "ada72fbf191fb287b4c1e54be372b64c40c27c2ffbfa01f880c92af11f4e7c94",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u482-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u482b08.tar.gz",
+      "name": "OpenJDK8U-jdk_aarch64_linux_hotspot_8u482b08.tar.gz",
       "version": "8",
       "is_lts": true,
       "provider": "Adoptium"
@@ -41,15 +50,6 @@
       "checksum": "e2aff19d85d2441e409d6cbdf12ef7c2acabb0de73bca4207947135dcaa935a2",
       "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u472b08.tar.gz",
       "name": "OpenJDK8U-jdk_aarch64_linux_hotspot_8u472b08.tar.gz",
-      "version": "8",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "aarch64",
-      "checksum": "19552c1cf7f5c18290a6bdcd6757f70ea5c331a2bc0dd7a3b3120e8dbc4b4891",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u462b08.tar.gz",
-      "name": "OpenJDK8U-jdk_aarch64_linux_hotspot_8u462b08.tar.gz",
       "version": "8",
       "is_lts": true,
       "provider": "Adoptium"
@@ -994,18 +994,18 @@
   "alpine-linux": [
     {
       "architecture": "x64",
-      "checksum": "2ded87ce3a1f912ac7263f7df526fb0a2ccbc09a2a0124e0b35e22c3decb9bc5",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u472b08.tar.gz",
-      "name": "OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u472b08.tar.gz",
+      "checksum": "149565c3de89ef9ceb640312ff77aadea79fb82fa946ae9aab4d024ba25eb47d",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u482-b08/OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u482b08.tar.gz",
+      "name": "OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u482b08.tar.gz",
       "version": "8",
       "is_lts": true,
       "provider": "Adoptium"
     },
     {
       "architecture": "x64",
-      "checksum": "21e28ad4faf34a2d353252ea363d57afe8d72f9d55f66a54e4e99fd1acb7786b",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u462b08.tar.gz",
-      "name": "OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u462b08.tar.gz",
+      "checksum": "2ded87ce3a1f912ac7263f7df526fb0a2ccbc09a2a0124e0b35e22c3decb9bc5",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u472b08.tar.gz",
+      "name": "OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u472b08.tar.gz",
       "version": "8",
       "is_lts": true,
       "provider": "Adoptium"
@@ -2015,9 +2015,9 @@
     },
     {
       "architecture": "x64",
-      "checksum": "720829aa4e4bddf3e95171cc059a52f7b9c56f443313dfef05114701bf60da06",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.1%2B8/OpenJDK25U-jdk_x64_mac_hotspot_25.0.1_8.tar.gz",
-      "name": "OpenJDK25U-jdk_x64_mac_hotspot_25.0.1_8.tar.gz",
+      "checksum": "7caddeb2d1d06a21487fdf55198349f122ba7b24bfc613b8923a42a133a92dc5",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_mac_hotspot_25.0.2_10.tar.gz",
+      "name": "OpenJDK25U-jdk_x64_mac_hotspot_25.0.2_10.tar.gz",
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
@@ -2062,18 +2062,18 @@
     },
     {
       "architecture": "ppc64",
-      "checksum": "2923c2dbf25f5f1dbd1d8ec695f8c03453cb5537778d8cb1cee07603dcbb7cc6",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
+      "checksum": "ce8381f8b990f2559509c2828fa6d93c0f9a3dbadce6544bda3c780f6c313da4",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%2B8/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.18_8.tar.gz",
+      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.18_8.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
     },
     {
       "architecture": "ppc64",
-      "checksum": "00c8b5601d289e0b5680462d25ca76a08b7886909f5fe8f33f446ebf32f376fb",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.16_8.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.16_8.tar.gz",
+      "checksum": "2923c2dbf25f5f1dbd1d8ec695f8c03453cb5537778d8cb1cee07603dcbb7cc6",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
+      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
