@@ -109,37 +109,10 @@
       "provider": "Adoptium"
     },
     {
-      "architecture": "aarch64",
-      "checksum": "71e00cd0ab4371a4e9d67d1a2ca3e8ed2f126dff6a6ab152a6ecdec60100fbdd",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.29_7.tar.gz",
-      "name": "OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.29_7.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "aarch64",
-      "checksum": "32c316cb3998a9c9dee2829fbb577ea1c0ed666700cec73e049d44c342bb19af",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.28_6.tar.gz",
-      "name": "OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.28_6.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "s390x",
-      "checksum": "12a494209c04a4cacee1615708b6856a770391d2588251a9a36e767ca4a07ac4",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.29_7.tar.gz",
-      "name": "OpenJDK11U-jdk_s390x_linux_hotspot_11.0.29_7.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "s390x",
-      "checksum": "ac3f94fdcc5372e90f44fad9cd03ec0e3fd3535fea06c120f85e4a7534c6de04",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.28_6.tar.gz",
-      "name": "OpenJDK11U-jdk_s390x_linux_hotspot_11.0.28_6.tar.gz",
+      "architecture": "arm",
+      "checksum": "1ef020c2215f3169c7610df573581806c58f00a0a1d512fd945a2687cbed1173",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_arm_linux_hotspot_11.0.30_7.tar.gz",
+      "name": "OpenJDK11U-jdk_arm_linux_hotspot_11.0.30_7.tar.gz",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -154,10 +127,37 @@
       "provider": "Adoptium"
     },
     {
-      "architecture": "arm",
-      "checksum": "b33c99068804bbd7e4aa4bd1c5419ae88ec77833e5e5339ab06a00546a2b0711",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_arm_linux_hotspot_11.0.28_6.tar.gz",
-      "name": "OpenJDK11U-jdk_arm_linux_hotspot_11.0.28_6.tar.gz",
+      "architecture": "s390x",
+      "checksum": "79869c9f79e22266efcb3e086bcb9bbd8d58605693f742e5785f215c0fa249ab",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.30_7.tar.gz",
+      "name": "OpenJDK11U-jdk_s390x_linux_hotspot_11.0.30_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "s390x",
+      "checksum": "12a494209c04a4cacee1615708b6856a770391d2588251a9a36e767ca4a07ac4",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.29_7.tar.gz",
+      "name": "OpenJDK11U-jdk_s390x_linux_hotspot_11.0.29_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "3c8fb6754deced4e08a03524b6af1df4f3df451f1832f3dcd3a6848fd54b8d08",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.30_7.tar.gz",
+      "name": "OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.30_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "71e00cd0ab4371a4e9d67d1a2ca3e8ed2f126dff6a6ab152a6ecdec60100fbdd",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.29_7.tar.gz",
+      "name": "OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.29_7.tar.gz",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -1290,6 +1290,143 @@
       "provider": "Adoptium"
     }
   ],
+  "aix": [
+    {
+      "architecture": "ppc64",
+      "checksum": "be2072fd614b31ef3261b6695df879853f03393b5a029852ebeda992892942ba",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u482-b08/OpenJDK8U-jdk_ppc64_aix_hotspot_8u482b08.tar.gz",
+      "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u482b08.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "71c006f0d6f6e7d654a4c91ac2a6cc86bbceb641bb685452d102e7bd0cea8f7d",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_ppc64_aix_hotspot_8u472b08.tar.gz",
+      "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u472b08.tar.gz",
+      "version": "8",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "0ad51ffbfa7650a793267450f27e2d34b592bb213a74ffd4f39aa8effe845e61",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.30_7.tar.gz",
+      "name": "OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.30_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "e668ffde477773ed63dd7d43623a68a6847291d8fb7463d351cd3b3f8d8737e7",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.29_7.tar.gz",
+      "name": "OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.29_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "ce8381f8b990f2559509c2828fa6d93c0f9a3dbadce6544bda3c780f6c313da4",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%2B8/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.18_8.tar.gz",
+      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.18_8.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "2923c2dbf25f5f1dbd1d8ec695f8c03453cb5537778d8cb1cee07603dcbb7cc6",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
+      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "3efeded404ac566c7ba4d0abcefb1762f2af0500a04ba51cb69393c667fba14b",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.9_10.tar.gz",
+      "name": "OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.9_10.tar.gz",
+      "version": "21",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "c4949ed2d75915be1c11329b04d0077b9b569eabeeb3d32c1bdf638d526fb082",
+      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.8%2B9/OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.8_9.tar.gz",
+      "name": "OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.8_9.tar.gz",
+      "version": "21",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "2f5c1905957a278232bbdc39bd408e7bd172c89445482499620d2fe9510bd4fa",
+      "link": "https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.2%2B9/OpenJDK22U-jdk_ppc64_aix_hotspot_22.0.2_9.tar.gz",
+      "name": "OpenJDK22U-jdk_ppc64_aix_hotspot_22.0.2_9.tar.gz",
+      "version": "22",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "23744393d9e843fccca19941e019fa47f84ab4d370d27641fcbfeffe8181e93c",
+      "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23%2B37/OpenJDK23U-jdk_ppc64_aix_hotspot_23_37.tar.gz",
+      "name": "OpenJDK23U-jdk_ppc64_aix_hotspot_23_37.tar.gz",
+      "version": "23",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "c26832afb1ef2453d90b7afad08936c10f430bf8bcf7b496aee4fa4e39432b1d",
+      "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.2%2B7/OpenJDK23U-jdk_ppc64_aix_hotspot_23.0.2_7.tar.gz",
+      "name": "OpenJDK23U-jdk_ppc64_aix_hotspot_23.0.2_7.tar.gz",
+      "version": "23",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "cf952f50c4580c16452f7b7457f00de69beaac67ec1a7b3a4685bbc412b77fa8",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.2_12.tar.gz",
+      "name": "OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.2_12.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "532d2d6d19579d07bc9a303f9cac7b65a3c1524660e12dec1ebb62e1f746cac4",
+      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9.1/OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
+      "name": "OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
+      "version": "24",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "28e983c021fab02f190d52a0a6d6823c7831b2a6cbf371e4a39b51a61a3e01b9",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_ppc64_aix_hotspot_25_36.tar.gz",
+      "name": "OpenJDK25U-jdk_ppc64_aix_hotspot_25_36.tar.gz",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64",
+      "checksum": "191305cfb0d133b51c956a4ae007d468275f3ff0e9778ae0481336e29238071c",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_ppc64_aix_hotspot_25.0.2_10.tar.gz",
+      "name": "OpenJDK25U-jdk_ppc64_aix_hotspot_25.0.2_10.tar.gz",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
+    }
+  ],
   "windows": [
     {
       "architecture": "x64",
@@ -1329,18 +1466,18 @@
     },
     {
       "architecture": "x64",
-      "checksum": "c21b63f6391b9d8f8aa969fb99250de797539cfb54232f5d4d371993f0c235b5",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.29_7.zip",
-      "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.29_7.zip",
+      "checksum": "925a63cb019fd605579e639980e99abefb3186e79f36979183dc45b294d6bf0f",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.zip",
+      "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.30_7.zip",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
     },
     {
       "architecture": "x64",
-      "checksum": "1422b070f94c93d3fdba7e0bcaa269389c92a928de54e47d988a1002d3a35dc2",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_x64_windows_hotspot_11.0.28_6.zip",
-      "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.28_6.zip",
+      "checksum": "c21b63f6391b9d8f8aa969fb99250de797539cfb54232f5d4d371993f0c235b5",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_x64_windows_hotspot_11.0.29_7.zip",
+      "name": "OpenJDK11U-jdk_x64_windows_hotspot_11.0.29_7.zip",
       "version": "11",
       "is_lts": true,
       "provider": "Adoptium"
@@ -1654,6 +1791,24 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "x64",
+      "checksum": "bb080059fdd02b61f8348f6b4d0878b8d33da0ebff9a6860e2497e4c5b8ee682",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.30%2B7/OpenJDK11U-jdk_x64_mac_hotspot_11.0.30_7.tar.gz",
+      "name": "OpenJDK11U-jdk_x64_mac_hotspot_11.0.30_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "4bad4982a355b6996e5ebe92b4c7e33bb4ba92ea0ea0fe274cbc994918ce86ff",
+      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_x64_mac_hotspot_11.0.29_7.tar.gz",
+      "name": "OpenJDK11U-jdk_x64_mac_hotspot_11.0.29_7.tar.gz",
+      "version": "11",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "aarch64",
       "checksum": "c6dd4f100ca6953db86470349e762db20903da5ca275b902390352e7dd4b8e0c",
       "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.29_7.tar.gz",
@@ -1673,29 +1828,29 @@
     },
     {
       "architecture": "x64",
-      "checksum": "4bad4982a355b6996e5ebe92b4c7e33bb4ba92ea0ea0fe274cbc994918ce86ff",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_x64_mac_hotspot_11.0.29_7.tar.gz",
-      "name": "OpenJDK11U-jdk_x64_mac_hotspot_11.0.29_7.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
-      "checksum": "4683f3b751310bfd228a5a64e6ee643e9f1ccadd38b4bac3d74597dbf6d5d57a",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_x64_mac_hotspot_11.0.28_6.tar.gz",
-      "name": "OpenJDK11U-jdk_x64_mac_hotspot_11.0.28_6.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
       "checksum": "27975d9e695cfbb93861540926f9f7bcac973a254ceecbee549706a99cbbdf95",
       "link": "https://github.com/adoptium/temurin16-binaries/releases/download/jdk-16.0.2%2B7/OpenJDK16U-jdk_x64_mac_hotspot_16.0.2_7.tar.gz",
       "name": "OpenJDK16U-jdk_x64_mac_hotspot_16.0.2_7.tar.gz",
       "version": "16",
       "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "47c2a8a62d6ba44bf46f2e468f9b3f26ad4b0bf6a51544e29c4520c18e709744",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%2B8/OpenJDK17U-jdk_x64_mac_hotspot_17.0.18_8.tar.gz",
+      "name": "OpenJDK17U-jdk_x64_mac_hotspot_17.0.18_8.tar.gz",
+      "version": "17",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "a2a7bfd3a767fcaf35a2e96cc562e6a63cd695e08c1a896222303c4e978da3d6",
+      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_x64_mac_hotspot_17.0.17_10.tar.gz",
+      "name": "OpenJDK17U-jdk_x64_mac_hotspot_17.0.17_10.tar.gz",
+      "version": "17",
+      "is_lts": true,
       "provider": "Adoptium"
     },
     {
@@ -1712,24 +1867,6 @@
       "checksum": "f9845abc8403f1d489402201064e7b9f2c57605d8717b85a95a15d94f882eeb7",
       "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.16_8.tar.gz",
       "name": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.16_8.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
-      "checksum": "a2a7bfd3a767fcaf35a2e96cc562e6a63cd695e08c1a896222303c4e978da3d6",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_x64_mac_hotspot_17.0.17_10.tar.gz",
-      "name": "OpenJDK17U-jdk_x64_mac_hotspot_17.0.17_10.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "x64",
-      "checksum": "ca5700c5d13124467ae52e1609881d7ce45d974870b18c3382ea8b7ae69d0f00",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.16%2B8/OpenJDK17U-jdk_x64_mac_hotspot_17.0.16_8.tar.gz",
-      "name": "OpenJDK17U-jdk_x64_mac_hotspot_17.0.16_8.tar.gz",
       "version": "17",
       "is_lts": true,
       "provider": "Adoptium"
@@ -2018,143 +2155,6 @@
       "checksum": "7caddeb2d1d06a21487fdf55198349f122ba7b24bfc613b8923a42a133a92dc5",
       "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_mac_hotspot_25.0.2_10.tar.gz",
       "name": "OpenJDK25U-jdk_x64_mac_hotspot_25.0.2_10.tar.gz",
-      "version": "25",
-      "is_lts": true,
-      "provider": "Adoptium"
-    }
-  ],
-  "aix": [
-    {
-      "architecture": "ppc64",
-      "checksum": "71c006f0d6f6e7d654a4c91ac2a6cc86bbceb641bb685452d102e7bd0cea8f7d",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_ppc64_aix_hotspot_8u472b08.tar.gz",
-      "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u472b08.tar.gz",
-      "version": "8",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "dc20d8fb34bd139c1c87ab7dafcdbeb7caa7ad7254de6fd234743106ba1227f1",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_ppc64_aix_hotspot_8u462b08.tar.gz",
-      "name": "OpenJDK8U-jdk_ppc64_aix_hotspot_8u462b08.tar.gz",
-      "version": "8",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "e668ffde477773ed63dd7d43623a68a6847291d8fb7463d351cd3b3f8d8737e7",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.29%2B7/OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.29_7.tar.gz",
-      "name": "OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.29_7.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "55adaab56fdd6aa06e068b8315b6dc5fd4b25bb0265a6bd16a2002b40137d174",
-      "link": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%2B6/OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.28_6.tar.gz",
-      "name": "OpenJDK11U-jdk_ppc64_aix_hotspot_11.0.28_6.tar.gz",
-      "version": "11",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "ce8381f8b990f2559509c2828fa6d93c0f9a3dbadce6544bda3c780f6c313da4",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%2B8/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.18_8.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.18_8.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "2923c2dbf25f5f1dbd1d8ec695f8c03453cb5537778d8cb1cee07603dcbb7cc6",
-      "link": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.17%2B10/OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
-      "name": "OpenJDK17U-jdk_ppc64_aix_hotspot_17.0.17_10.tar.gz",
-      "version": "17",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "3efeded404ac566c7ba4d0abcefb1762f2af0500a04ba51cb69393c667fba14b",
-      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.9%2B10/OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.9_10.tar.gz",
-      "name": "OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.9_10.tar.gz",
-      "version": "21",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "c4949ed2d75915be1c11329b04d0077b9b569eabeeb3d32c1bdf638d526fb082",
-      "link": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.8%2B9/OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.8_9.tar.gz",
-      "name": "OpenJDK21U-jdk_ppc64_aix_hotspot_21.0.8_9.tar.gz",
-      "version": "21",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "2f5c1905957a278232bbdc39bd408e7bd172c89445482499620d2fe9510bd4fa",
-      "link": "https://github.com/adoptium/temurin22-binaries/releases/download/jdk-22.0.2%2B9/OpenJDK22U-jdk_ppc64_aix_hotspot_22.0.2_9.tar.gz",
-      "name": "OpenJDK22U-jdk_ppc64_aix_hotspot_22.0.2_9.tar.gz",
-      "version": "22",
-      "is_lts": false,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "23744393d9e843fccca19941e019fa47f84ab4d370d27641fcbfeffe8181e93c",
-      "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23%2B37/OpenJDK23U-jdk_ppc64_aix_hotspot_23_37.tar.gz",
-      "name": "OpenJDK23U-jdk_ppc64_aix_hotspot_23_37.tar.gz",
-      "version": "23",
-      "is_lts": false,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "c26832afb1ef2453d90b7afad08936c10f430bf8bcf7b496aee4fa4e39432b1d",
-      "link": "https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.2%2B7/OpenJDK23U-jdk_ppc64_aix_hotspot_23.0.2_7.tar.gz",
-      "name": "OpenJDK23U-jdk_ppc64_aix_hotspot_23.0.2_7.tar.gz",
-      "version": "23",
-      "is_lts": false,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "cf952f50c4580c16452f7b7457f00de69beaac67ec1a7b3a4685bbc412b77fa8",
-      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.2_12.tar.gz",
-      "name": "OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.2_12.tar.gz",
-      "version": "24",
-      "is_lts": false,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "532d2d6d19579d07bc9a303f9cac7b65a3c1524660e12dec1ebb62e1f746cac4",
-      "link": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.1%2B9.1/OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
-      "name": "OpenJDK24U-jdk_ppc64_aix_hotspot_24.0.1_9.1.tar.gz",
-      "version": "24",
-      "is_lts": false,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "28e983c021fab02f190d52a0a6d6823c7831b2a6cbf371e4a39b51a61a3e01b9",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_ppc64_aix_hotspot_25_36.tar.gz",
-      "name": "OpenJDK25U-jdk_ppc64_aix_hotspot_25_36.tar.gz",
-      "version": "25",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64",
-      "checksum": "191305cfb0d133b51c956a4ae007d468275f3ff0e9778ae0481336e29238071c",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_ppc64_aix_hotspot_25.0.2_10.tar.gz",
-      "name": "OpenJDK25U-jdk_ppc64_aix_hotspot_25.0.2_10.tar.gz",
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
