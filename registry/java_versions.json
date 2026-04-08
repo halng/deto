@@ -1016,6 +1016,24 @@
       "version": "26",
       "is_lts": false,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "s390x",
+      "checksum": "87fcdbbfd0adfd458922d8f8019eda23755aba597e386de2397f84cdf1b58808",
+      "link": "https://github.com/adoptium/temurin26-binaries/releases/download/jdk-26%2B35/OpenJDK26U-jdk_s390x_linux_hotspot_26_35.tar.gz",
+      "name": "OpenJDK26U-jdk_s390x_linux_hotspot_26_35.tar.gz",
+      "version": "26",
+      "is_lts": false,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "riscv64",
+      "checksum": "044cd107152425e189c7094b0f1c566afddf255149c56a7758e300481923fec6",
+      "link": "https://github.com/adoptium/temurin26-binaries/releases/download/jdk-26%2B35/OpenJDK26U-jdk_riscv64_linux_hotspot_26_35.tar.gz",
+      "name": "OpenJDK26U-jdk_riscv64_linux_hotspot_26_35.tar.gz",
+      "version": "26",
+      "is_lts": false,
+      "provider": "Adoptium"
     }
   ],
   "alpine-linux": [
@@ -1877,6 +1895,15 @@
       "version": "26",
       "is_lts": false,
       "provider": "Adoptium"
+    },
+    {
+      "architecture": "aarch64",
+      "checksum": "596ba026474808b75e934aa8c32cf9b340fafc455d06f366ede4f2932f206eb1",
+      "link": "https://github.com/adoptium/temurin26-binaries/releases/download/jdk-26%2B35/OpenJDK26U-jdk_aarch64_mac_hotspot_26_35.tar.gz",
+      "name": "OpenJDK26U-jdk_aarch64_mac_hotspot_26_35.tar.gz",
+      "version": "26",
+      "is_lts": false,
+      "provider": "Adoptium"
     }
   ],
   "windows": [
@@ -2220,6 +2247,15 @@
       "name": "OpenJDK25U-jdk_x64_windows_hotspot_25.0.2_10.zip",
       "version": "25",
       "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "x64",
+      "checksum": "f36dbdfbd36401d6bf34c418e6405aedc17296cc72ec8335b5754d90e47aec64",
+      "link": "https://github.com/adoptium/temurin26-binaries/releases/download/jdk-26%2B35/OpenJDK26U-jdk_x64_windows_hotspot_26_35.zip",
+      "name": "OpenJDK26U-jdk_x64_windows_hotspot_26_35.zip",
+      "version": "26",
+      "is_lts": false,
       "provider": "Adoptium"
     }
   ],
