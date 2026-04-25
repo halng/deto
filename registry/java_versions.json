@@ -937,6 +937,24 @@
       "provider": "Adoptium"
     },
     {
+      "architecture": "ppc64le",
+      "checksum": "b060bb12b3a192a0599f03ebb9495492f78c48cb61e291e336a8b00e7798ffb0",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_ppc64le_linux_hotspot_25_36.tar.gz",
+      "name": "OpenJDK25U-jdk_ppc64le_linux_hotspot_25_36.tar.gz",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
+      "architecture": "ppc64le",
+      "checksum": "72b0fbb201716ca465ab704ec0fb12971abab3fdde5ae8d03b125a273522cf05",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.3%2B9/OpenJDK25U-jdk_ppc64le_linux_hotspot_25.0.3_9.tar.gz",
+      "name": "OpenJDK25U-jdk_ppc64le_linux_hotspot_25.0.3_9.tar.gz",
+      "version": "25",
+      "is_lts": true,
+      "provider": "Adoptium"
+    },
+    {
       "architecture": "riscv64",
       "checksum": "3fc35759502b620f010a9cd2b3da8454f8a49a156ceaebb00de1fd8335682d40",
       "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_riscv64_linux_hotspot_25_36.tar.gz",
@@ -950,24 +968,6 @@
       "checksum": "168119e4fba350f4e6b3ca92450a2b90a8502b89a235a04415e9adf9f5d3164e",
       "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_riscv64_linux_hotspot_25.0.2_10.tar.gz",
       "name": "OpenJDK25U-jdk_riscv64_linux_hotspot_25.0.2_10.tar.gz",
-      "version": "25",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64le",
-      "checksum": "b060bb12b3a192a0599f03ebb9495492f78c48cb61e291e336a8b00e7798ffb0",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25%2B36/OpenJDK25U-jdk_ppc64le_linux_hotspot_25_36.tar.gz",
-      "name": "OpenJDK25U-jdk_ppc64le_linux_hotspot_25_36.tar.gz",
-      "version": "25",
-      "is_lts": true,
-      "provider": "Adoptium"
-    },
-    {
-      "architecture": "ppc64le",
-      "checksum": "b262b735b215173003766da36588d5f717dceada0286db41b439f93fb2ada468",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_ppc64le_linux_hotspot_25.0.2_10.tar.gz",
-      "name": "OpenJDK25U-jdk_ppc64le_linux_hotspot_25.0.2_10.tar.gz",
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
@@ -1327,9 +1327,9 @@
     },
     {
       "architecture": "x64",
-      "checksum": "961f13ba0ee1e18c41c50ab642361e4283dee5e7947a48ed6a72c8a661d0cca0",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_alpine-linux_hotspot_25.0.2_10.tar.gz",
-      "name": "OpenJDK25U-jdk_x64_alpine-linux_hotspot_25.0.2_10.tar.gz",
+      "checksum": "51c2415b370aac7c3796b0c4663c8fcf91bc22d76f03df95b25fa5667cb5fdd8",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.3%2B9/OpenJDK25U-jdk_x64_alpine-linux_hotspot_25.0.3_9.tar.gz",
+      "name": "OpenJDK25U-jdk_x64_alpine-linux_hotspot_25.0.3_9.tar.gz",
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
@@ -1880,9 +1880,9 @@
     },
     {
       "architecture": "x64",
-      "checksum": "7caddeb2d1d06a21487fdf55198349f122ba7b24bfc613b8923a42a133a92dc5",
-      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.2%2B10/OpenJDK25U-jdk_x64_mac_hotspot_25.0.2_10.tar.gz",
-      "name": "OpenJDK25U-jdk_x64_mac_hotspot_25.0.2_10.tar.gz",
+      "checksum": "4c539a18b4d656960ff6766727e9ca546fc17f7a29714dba9e7b47bdcb37c447",
+      "link": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.3%2B9/OpenJDK25U-jdk_x64_mac_hotspot_25.0.3_9.tar.gz",
+      "name": "OpenJDK25U-jdk_x64_mac_hotspot_25.0.3_9.tar.gz",
       "version": "25",
       "is_lts": true,
       "provider": "Adoptium"
