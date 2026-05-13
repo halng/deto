@@ -1999,18 +1999,18 @@
   "windows": [
     {
       "architecture": "x64",
-      "checksum": "51637ae41af1bce379a9d059109820864949c8d57ca302e0d502fcf329d33a72",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u482-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u482b08.zip",
-      "name": "OpenJDK8U-jdk_x64_windows_hotspot_8u482b08.zip",
+      "checksum": "1e33881ea6bfc1c532e3eaad1c1de7777169c0c1333e2b880621e0e0a16073b2",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u492-b09/OpenJDK8U-jdk_x64_windows_hotspot_8u492b09.zip",
+      "name": "OpenJDK8U-jdk_x64_windows_hotspot_8u492b09.zip",
       "version": "8",
       "is_lts": true,
       "provider": "Adoptium"
     },
     {
       "architecture": "x64",
-      "checksum": "cbafb089f7c8a3e873607c8f4fe40e4943297f641d27806e055e782c82a33985",
-      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u472-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u472b08.zip",
-      "name": "OpenJDK8U-jdk_x64_windows_hotspot_8u472b08.zip",
+      "checksum": "51637ae41af1bce379a9d059109820864949c8d57ca302e0d502fcf329d33a72",
+      "link": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u482-b08/OpenJDK8U-jdk_x64_windows_hotspot_8u482b08.zip",
+      "name": "OpenJDK8U-jdk_x64_windows_hotspot_8u482b08.zip",
       "version": "8",
       "is_lts": true,
       "provider": "Adoptium"
